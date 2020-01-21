@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>贪心算法刷题 // My New Hugo Site</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.59.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://lilacrainode.github.io/css/main.min.61bb32028587f24ca28522d8d197970c7ef33284e5fffb45a75fcbbb2dbc4dcb.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="贪心算法刷题"/>
+<meta name="twitter:description" content="题目
+ 首先用笔计算可得，当公里数为13时分两次乘车的花费和只一次乘车的花费相等，都是30元，因此13公里为一个分界线 计算可得，如果只乘8公里的车的话，总价格为10&#43;4*2=18，平均一公里2.25元，而8公里之后每公里需要2.4元，由此可知，假设需要行驶的路程无限大，一定是每8公里换一次车最划算，明白这一点之后这个题目就好办多了，首先按照贪心算法的思路，可以想到，每次要从总里程数中减去8公里，然后车费加上18元，直到剩下的总里程小于8公里为止，再进行下一步。 由此我们获得了一个最后的小于8公里的里程数a,而其实问题就转化为最后一步：“最后8&#43;a”公里应该怎么安排。计算可得，当需要行驶13公里的时候，先行驶8公里再换车的价格为：20&#43;5*2=30元，而一次行驶13公里的价格为：10&#43;8&#43;5*2.4=30元，相等。所以如果最后的8&#43;a公里大于13，就应该再换车一次，如果小于13，则应一次走完。 由以上思路可以得到代码：
+#include &lt;stdio.h&gt; int main() { int n; while (scanf(&quot;%d&quot;, &amp;n), n != 0) { if (n &lt;= 4) { printf(&quot;%d\n&quot;, 10); continue; } if (n &lt;= 8) { printf(&quot;%d\n&quot;, 10 &#43; (n - 4) * 2); continue; } double sum = 0.0; while (n &gt;= 8) { sum &#43;= 18; n -= 8; } //不断n-8直到剩余的小于8，其实也可以用余数来做 if (n &lt;= 5) { sum &#43;= n * 2."/>
+
+    <meta property="og:title" content="贪心算法刷题" />
+<meta property="og:description" content="题目
+ 首先用笔计算可得，当公里数为13时分两次乘车的花费和只一次乘车的花费相等，都是30元，因此13公里为一个分界线 计算可得，如果只乘8公里的车的话，总价格为10&#43;4*2=18，平均一公里2.25元，而8公里之后每公里需要2.4元，由此可知，假设需要行驶的路程无限大，一定是每8公里换一次车最划算，明白这一点之后这个题目就好办多了，首先按照贪心算法的思路，可以想到，每次要从总里程数中减去8公里，然后车费加上18元，直到剩下的总里程小于8公里为止，再进行下一步。 由此我们获得了一个最后的小于8公里的里程数a,而其实问题就转化为最后一步：“最后8&#43;a”公里应该怎么安排。计算可得，当需要行驶13公里的时候，先行驶8公里再换车的价格为：20&#43;5*2=30元，而一次行驶13公里的价格为：10&#43;8&#43;5*2.4=30元，相等。所以如果最后的8&#43;a公里大于13，就应该再换车一次，如果小于13，则应一次走完。 由以上思路可以得到代码：
+#include &lt;stdio.h&gt; int main() { int n; while (scanf(&quot;%d&quot;, &amp;n), n != 0) { if (n &lt;= 4) { printf(&quot;%d\n&quot;, 10); continue; } if (n &lt;= 8) { printf(&quot;%d\n&quot;, 10 &#43; (n - 4) * 2); continue; } double sum = 0.0; while (n &gt;= 8) { sum &#43;= 18; n -= 8; } //不断n-8直到剩余的小于8，其实也可以用余数来做 if (n &lt;= 5) { sum &#43;= n * 2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lilacrainode.github.io/post/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/" />
+<meta property="article:published_time" content="2020-01-21T20:43:09+08:00" />
+<meta property="article:modified_time" content="2020-01-21T20:43:09+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://lilacrainode.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>My New Hugo Site</h1>
+      <p>雨初的博客</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">贪心算法刷题</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 21, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <p><a href="http://codeup.cn/problem.php?cid=100000584&amp;pid=1">题目</a><br></p>
+
+<ol>
+<li>首先用笔计算可得，当公里数为13时分两次乘车的花费和只一次乘车的花费相等，都是30元，因此13公里为一个分界线</li>
+<li>计算可得，如果只乘8公里的车的话，总价格为10+4*2=18，<strong>平均一公里2.25元</strong>，而8公里之后每公里需要2.4元，由此可知，假设需要行驶的路程无限大，<strong>一定是每8公里换一次车最划算</strong>，明白这一点之后这个题目就好办多了，首先按照贪心算法的思路，可以想到，每次要从总里程数中减去8公里，然后车费加上18元，直到剩下的总里程小于8公里为止，再进行下一步。</li>
+
+<li><p>由此我们获得了一个最后的<strong>小于8公里的里程数a</strong>,而其实问题就转化为最后一步：“最后8+a”公里应该怎么安排。计算可得，当需要行驶13公里的时候，先行驶8公里再换车的价格为：<strong>20+5*2=30</strong>元，而一次行驶13公里的价格为：<strong>10+8+5*2.4=30</strong>元，相等。所以如果最后的8+a公里大于13，就应该再换车一次，如果小于13，则应一次走完。
+由以上思路可以得到代码：</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+int main()
+{
+int n;
+while (scanf(&quot;%d&quot;, &amp;n), n != 0)
+{
+    if (n &lt;= 4)
+    {
+        printf(&quot;%d\n&quot;, 10);
+        continue;
+    }
+    if (n &lt;= 8)
+    {
+        printf(&quot;%d\n&quot;, 10 + (n - 4) * 2);
+        continue;
+    }
+    double sum = 0.0;
+    while (n &gt;= 8)
+    {
+        sum += 18;
+        n -= 8;
+    } //不断n-8直到剩余的小于8，其实也可以用余数来做
+    if (n &lt;= 5)
+    {
+        sum += n * 2.4;
+    }
+    else if (n &lt;= 8)
+    {
+        sum += 10 + (n - 4) * 2;
+    }
+    if (sum - (int)sum == 0)
+        printf(&quot;%d\n&quot;, (int)sum); //此处是为了符合输出标准。
+    else
+        printf(&quot;%.1lf\n&quot;, sum);
+}
+return 0;
+}
+
+
+</code></pre></li>
+</ol>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

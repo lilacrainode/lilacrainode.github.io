@@ -6,10 +6,140 @@
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jan 2020 19:49:36 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jan 2020 21:00:27 +0800</lastBuildDate>
     
 	<atom:link href="https://lilacrainode.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>正则表达式</title>
+      <link>https://lilacrainode.github.io/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <pubDate>Tue, 21 Jan 2020 21:00:27 +0800</pubDate>
+      
+      <guid>https://lilacrainode.github.io/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <description> .* 默认为贪婪匹配，会匹配的结果尽量使一个字符串最长 .*? 为懒惰匹配，使匹配的结果最多(P29) ()里面的和后面的\1匹配的东西是一样的，如果()里面是点(.)而这个点匹配到的字符是A，那么后面的\1就相当于是字符A 模式修正符中的m是多行匹配，而如果是WINDOWS系统下的话看到的换行其实是\r\n,所以如果只是输入换行的话会出现匹配不到的现象，所以要/test/r*$/m这样来兼容linux和windows系统 preg_match的返回值是0或者1或者FALSE，如果找到了就返回1，如果没有找到就返回0，如果发生错误就返回FALSE preg_replace可以用来替换字符，用来替换的字符中可以使用\1来获得在被替换的字符串中的()括起来的内容，见孙胜利教程(P31)  </description>
+    </item>
+    
+    <item>
+      <title>Mysql笔记</title>
+      <link>https://lilacrainode.github.io/post/mysql%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 21 Jan 2020 20:58:04 +0800</pubDate>
+      
+      <guid>https://lilacrainode.github.io/post/mysql%E7%AC%94%E8%AE%B0/</guid>
+      <description>asc &amp;mdash;&amp;ndash; ascending order升序 desc &amp;mdash;&amp;ndash; descending order降序 set global interactive_timeout = 1000000;原来是120,为了防止长时间不使用之后断开连接，设置成了100000。    +&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;+&amp;mdash;&amp;mdash;&amp;mdash;-+
+| Variable_name | Value |
++&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;+&amp;mdash;&amp;mdash;&amp;mdash;-+
+| connect_timeout | 10 |
+| delayed_insert_timeout | 300 |
+| have_statement_timeout | YES |
+| innodb_flush_log_at_timeout | 1 |
+| innodb_lock_wait_timeout | 120 |
+| innodb_rollback_on_timeout | OFF |
+| interactive_timeout | 120 |
+| lock_wait_timeout | 31536000 |
+| net_read_timeout | 30 |
+| net_write_timeout | 60 |</description>
+    </item>
+    
+    <item>
+      <title>Php学习笔记</title>
+      <link>https://lilacrainode.github.io/post/php%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 21 Jan 2020 20:58:04 +0800</pubDate>
+      
+      <guid>https://lilacrainode.github.io/post/php%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description> php没有创建变量的命令，变量会在首次为其赋值时被创建 函数以外的变量只能在函数之外访问，不能在函数之内访问，具有GLOBAL作用域 常量是自动全局的，可以贯穿整个脚本使用，在函数内部也可以用，定义常量的时候要用define 字符串运算符中有一个点运算符,可以拼接两个字符串 PHP的函数传参的时候可以使用默认的参数值如果调用函数的时候没有进行传参，那么将会使用默认的值 php在名为$GLOBALS[index]的数组中存储了所有的全局变量，变量的名字就是数组的键 $_GET 是通过 URL 参数传递到当前脚本的变量数组。 $_POST 是通过 HTTP POST 传递到当前脚本的变量数组。
+ 在函数传参的时候可以传入多于定义的参数数量的参数，func_get_arg(0);用来获取下标为0的参数
+ 在PHP的函数里面，使用/开头的路径的话指定的是在电脑的文件系统的位置
+ PHP 不能 print &amp;ldquo;{$i++}&amp;rdquo;;
+ mysqli_connect_errno()返回上一次连接错误的错误代码，如果没有错误就返回0
+ $string = implode(&amp;ldquo;a&amp;rdquo;,$arr) 用来将arr数组里面的东西拼接起来，中间用a来分割
+  </description>
+    </item>
+    
+    <item>
+      <title>哈曼夫树</title>
+      <link>https://lilacrainode.github.io/post/%E5%93%88%E6%9B%BC%E5%A4%AB%E6%A0%91/</link>
+      <pubDate>Tue, 21 Jan 2020 20:57:16 +0800</pubDate>
+      
+      <guid>https://lilacrainode.github.io/post/%E5%93%88%E6%9B%BC%E5%A4%AB%E6%A0%91/</guid>
+      <description> 初始状态下有n个结点，将他们视座n棵只有一个结点的树 合并其中根节点最小的两棵树，这样树的总数就少了一颗 重复操作2，直到只剩下一棵树为止，这棵树就是哈曼夫树  </description>
+    </item>
+    
+    <item>
+      <title>Html &amp; css笔记</title>
+      <link>https://lilacrainode.github.io/post/html-css%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 21 Jan 2020 20:56:13 +0800</pubDate>
+      
+      <guid>https://lilacrainode.github.io/post/html-css%E7%AC%94%E8%AE%B0/</guid>
+      <description> html  空格要用&amp;amp;nbsp来表示，也可以用全角符号中的空格来表示 内联元素又名行内元素，内联元素的显示可以形象地成为文本模式，即一个埃一个，在同一行按从左往右的顺序显示 lable标签可以用来提升用户体验，可以在点击lable的字之后运行控件 1.2、具有boolean值得属性 例如：disabled,readonly，checked等 只写属性而不写属性值得时候 当做ture 不写属性表示 false  css  #div1用来选择ID的样式 .class1用来选择类的样式，一个div里面可以用多个样式(前面有一个点) p 用来选择标签的样式，前面什么都不用加  </description>
+    </item>
+    
+    <item>
+      <title>最长回文字符串</title>
+      <link>https://lilacrainode.github.io/post/%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Tue, 21 Jan 2020 20:56:13 +0800</pubDate>
+      
+      <guid>https://lilacrainode.github.io/post/%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>ULL get(ULL h[], int l, int r) { return h[r] - h[l - 1] * p[r - l + 1]; }  这个get函数有点难懂,举个例子这个字符串长度为5,是&amp;rdquo;abcde&amp;rdquo;
+传入的参数:l = 3, r = 5,即需要返回cde字符串的哈希值.如果直接用131进制来想的话可能会有点蒙,不妨用10进制来整理思路.可以知道如果用10进制来想的话,整个字符串的哈希值为12345,需要返回的目标哈希值为345.其实就是12345-12*10^3.
+P[N]是用来存储转换进制需要乘的数字的,如果按照10进制来想,里面存储的数字就是{1,10,100,1000&amp;hellip;&amp;hellip;.}
+那么就可以理清思路写出return的数字了
+从开头到下标为r的字符串的哈希值是h[r],要想得到(l,r)区间的字符串的哈希值,即为:
+ return h[r] - h[l - 1] * p[r - l + 1];  二分查找中mid的值是当前的需要寻找的离中点的距离
+#include &amp;lt;iostream&amp;gt; #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;string.h&amp;gt; #include &amp;lt;algorithm&amp;gt; using namespace std; typedef unsigned long long ULL; const int N = 110, base = 131; //base用来存储进制 ULL hl[N], hr[N], p[N]; //其中hl用来存储正序的每一位的哈希值，hr用来存储逆序的每一位的哈希值，p用来存储base^i的值 char str[N]; ULL get(ULL h[], int l, int r) { return h[r] - h[l - 1] * p[r - l + 1]; } //get函数用来返回[l,r]字符串的哈希值 int main() { hl[0] = 0; hr[0] = 0; int mid; int result = 0; while (scanf(&amp;quot;%s&amp;quot;, str + 1), strcmp(str + 1, &amp;quot;END&amp;quot;)) { int len = strlen(str + 1); //记录录入的字符串的长度 for (int i = len * 2; i &amp;gt; 0; i -= 2) { //将每两个字符的中间补上空格 str[i] = str[i / 2]; str[i - 1] = &#39;z&#39; + 1; } len *= 2; p[0] = 1; //记录变换时需要乘的数的数组的第一位是1 for (int i = 1, j = len ; i &amp;lt;= len; i++, j--) {//abacacbaaaab p[i] = p[i - 1] * base; hl[i] = hl[i - 1] * base + str[i] - &#39;a&#39; + 1; hr[i] = hr[i - 1] * base + str[j] - &#39;a&#39; + 1; //相当于将字符串反转，将最后一个元素的下标当作1，并重新将哈希值存入数组 } for (int i = 1; i &amp;lt;= len; i++) { int l = 0, r = min(i - 1, len - i); while (l &amp;lt; r) { mid = (l + r + 1) &amp;gt;&amp;gt; 1; if (get(hl, i - mid, i - 1) !</description>
+    </item>
+    
+    <item>
+      <title>二叉堆</title>
+      <link>https://lilacrainode.github.io/post/%E4%BA%8C%E5%8F%89%E5%A0%86/</link>
+      <pubDate>Tue, 21 Jan 2020 20:56:10 +0800</pubDate>
+      
+      <guid>https://lilacrainode.github.io/post/%E4%BA%8C%E5%8F%89%E5%A0%86/</guid>
+      <description> 使用数组来存储二叉堆，第一个结点将存储于数组中的1号位，并且数组i号位表示的结点的左孩子就是2i号位，而右孩子则是(2i+1)号位,（（（日后复习的时候可以画画看，如果是完全二叉树的画一个位置都不会浪费  </description>
+    </item>
+    
+    <item>
+      <title>并查集</title>
+      <link>https://lilacrainode.github.io/post/%E5%B9%B6%E6%9F%A5%E9%9B%86/</link>
+      <pubDate>Tue, 21 Jan 2020 20:54:58 +0800</pubDate>
+      
+      <guid>https://lilacrainode.github.io/post/%E5%B9%B6%E6%9F%A5%E9%9B%86/</guid>
+      <description>count&amp;ndash;的话，是一进去就减了
+算法笔记P343 好朋友代码
+#include &amp;lt;stdio.h&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;algorithm&amp;gt; using namespace std; const int N = 110; int father[N]; bool isRoot[N]; void Union(int a,int b); void init(int n); int findFather(int x); int main() { int n, m; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m; int a, b; init(n); while (m--) { scanf(&amp;quot;%d%d&amp;quot;, &amp;amp;a, &amp;amp;b); Union(a, b); } for (int i = 1; i &amp;lt;= n; i++) { isRoot[findFather(i)] = true; } int ans = 0; for (int i = 1; i &amp;lt;= n; i++) { if (isRoot[i]) { ans++; } } cout &amp;lt;&amp;lt; ans &amp;lt;&amp;lt; endl; //&amp;lt;&amp;lt; endl; return 0; } /* int findFather(int x) { while (x !</description>
+    </item>
+    
+    <item>
+      <title>AVL</title>
+      <link>https://lilacrainode.github.io/post/avl/</link>
+      <pubDate>Tue, 21 Jan 2020 20:54:17 +0800</pubDate>
+      
+      <guid>https://lilacrainode.github.io/post/avl/</guid>
+      <description>某个结点的平衡因子的定义是左子树的高度减去右子树的高度，在平衡二叉树中平衡因子只可能为 -1，0，1.不可能为其他数值
+ LL型直接以根节点A为ROOT进行右旋，LR型先忽略根节点，将根节点的左子树进行左旋，旋转成为LL型AVL，再旋转LL型AVL
+#include &amp;lt;stdio.h&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;algorithm&amp;gt; using namespace std; int A[510]; bool flag = false; struct node { // int data; node *lchild; node *rchild; int height; int v; }; node *newNode(int v) //其中V为该结点的权值 { node *temp = new node; temp-&amp;gt;lchild = temp-&amp;gt;rchild = NULL; temp-&amp;gt;v = v; return temp; } int getheight(node *root) { if (root == NULL) return 0; else return root-&amp;gt;height; } void updateheight(node *root) { root-&amp;gt;height = max(getheight(root-&amp;gt;lchild), getheight(root-&amp;gt;rchild)) + 1; } void leftRotate(node *&amp;amp;root) //左旋操作 { node *temp = root-&amp;gt;rchild; //使用一个临时的指针指向root的右子树 root-&amp;gt;rchild = temp-&amp;gt;lchild; temp-&amp;gt;lchild = root; updateheight(root); updateheight(temp); root = temp; } void rightrotate(node *root) //右旋操作 { node *temp = root-&amp;gt;lchild; root-&amp;gt;lchild = temp-&amp;gt;rchild; temp-&amp;gt;rchild = root; updateheight(root); updateheight(temp); root = temp; } int getBalanceHeight(node *root) //得到当前结点的权重 { return getheight(root-&amp;gt;lchild) - getheight(root-&amp;gt;rchild); } void insert(node *&amp;amp;root, int v) // 传参的时候还是要加引用 { if (root == NULL) { root = newNode(v); return; } if (v &amp;lt; root-&amp;gt;v) { insert(root-&amp;gt;lchild, v); updateheight(root); if (getBalanceHeight(root) == 2) { if (getBalanceHeight(root-&amp;gt;lchild) == 1) { //如果是LL型的 rightrotate(root); } else if (getBalanceHeight(root-&amp;gt;rchild) == -1) { leftRotate(root-&amp;gt;lchild); rightrotate(root); } else { cout &amp;lt;&amp;lt; &amp;quot;something went wrong&amp;quot; &amp;lt;&amp;lt; endl; } } } else { insert(root-&amp;gt;rchild, v); updateheight(root); if (getBalanceHeight(root) == -2) { if (getBalanceHeight(root-&amp;gt;rchild) == 1) { //如果是RL型的 rightrotate(root-&amp;gt;lchild); leftRotate(root); } else if (getBalanceHeight(root-&amp;gt;rchild) == -1) { leftRotate(root); } else { cout &amp;lt;&amp;lt; &amp;quot;something went wrong&amp;quot; &amp;lt;&amp;lt; endl; } } } } node *create(int A[], int n) //返回的是指向根节点的指针，传入的是数组第一个位置的指针和需要插入的元素多少 { node *root = NULL; for (int i = 0; i &amp;lt; n; i++) { insert(root, A[i]); } return root; } void search1111(node *root, int x) { if (root == NULL) return; //没有找到，返回 if (root-&amp;gt;v == x) { flag = true; } else if (x &amp;lt; root-&amp;gt;v) { search1111(root-&amp;gt;lchild, x); } else if (x &amp;gt;= root-&amp;gt;v) { search1111(root-&amp;gt;rchild, x); } else { cout &amp;lt;&amp;lt; &amp;quot;something went wrong&amp;quot; &amp;lt;&amp;lt; endl; } return; } int main() { int n, k; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; k; for (int i = 0; i &amp;lt; n; i++) { scanf(&amp;quot;%d&amp;quot;, &amp;amp;A[i]); } node *root = create(A, n); cin &amp;gt;&amp;gt; n; search1111(root, n); if (flag == true) { cout &amp;lt;&amp;lt; &amp;quot;1&amp;quot;; flag = false; } else { cout &amp;lt;&amp;lt; &amp;quot;0&amp;quot;; } for (int i = 1; i &amp;lt; k; i++) { scanf(&amp;quot;%d&amp;quot;, &amp;amp;n); search1111(root, n); if (flag == true) { cout &amp;lt;&amp;lt; &amp;quot; 1&amp;quot;; flag = false; } else { cout &amp;lt;&amp;lt; &amp;quot; 0&amp;quot;; } } cout &amp;lt;&amp;lt; endl; return 0; }   </description>
+    </item>
+    
+    <item>
+      <title>滑动窗口</title>
+      <link>https://lilacrainode.github.io/post/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
+      <pubDate>Tue, 21 Jan 2020 20:51:50 +0800</pubDate>
+      
+      <guid>https://lilacrainode.github.io/post/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</guid>
+      <description>题目链接（acwing）
+滑动窗口是用来考察队列用法的一道经典题  #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;stdlib.h&amp;gt; #include &amp;lt;string.h&amp;gt; #include &amp;lt;algorithm&amp;gt; using namespace std; const int N = 1000010; int q[N]; //队列中存储的是对应的A中的下标 int A[N]; int tt, hh; bool flag = false; int main() { int n, k; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; k; for (int i = 0; i &amp;lt; n; i++) { scanf(&amp;quot;%d&amp;quot;, &amp;amp;A[i]); } tt = -1; hh = 0; for (int i = 0; i &amp;lt; n; i++) { if (tt &amp;gt;= hh &amp;amp;&amp;amp; q[hh] &amp;lt; i - k + 1) //如果队列不为空而且队头所对应的下标在窗口之外 { hh++; } while (tt &amp;gt;= hh &amp;amp;&amp;amp; A[q[tt]] &amp;gt;= A[i]) { //如果队列不为空而且当前队尾的元素要大于当前遍历到的元素 tt--; //将队尾元素删除（如果用STL库的QUEUE的话好像不能这样。。要用deque） } q[++tt] = i; //当前队列中前面的元素都要比A[i]要小（或者队列为空），将当前的下标压入队列中 if (i &amp;gt;= k - 1) { if (!</description>
+    </item>
+    
+    <item>
+      <title>贪心算法刷题</title>
+      <link>https://lilacrainode.github.io/post/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/</link>
+      <pubDate>Tue, 21 Jan 2020 20:43:09 +0800</pubDate>
+      
+      <guid>https://lilacrainode.github.io/post/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/</guid>
+      <description>题目
+ 首先用笔计算可得，当公里数为13时分两次乘车的花费和只一次乘车的花费相等，都是30元，因此13公里为一个分界线 计算可得，如果只乘8公里的车的话，总价格为10+4*2=18，平均一公里2.25元，而8公里之后每公里需要2.4元，由此可知，假设需要行驶的路程无限大，一定是每8公里换一次车最划算，明白这一点之后这个题目就好办多了，首先按照贪心算法的思路，可以想到，每次要从总里程数中减去8公里，然后车费加上18元，直到剩下的总里程小于8公里为止，再进行下一步。 由此我们获得了一个最后的小于8公里的里程数a,而其实问题就转化为最后一步：“最后8+a”公里应该怎么安排。计算可得，当需要行驶13公里的时候，先行驶8公里再换车的价格为：20+5*2=30元，而一次行驶13公里的价格为：10+8+5*2.4=30元，相等。所以如果最后的8+a公里大于13，就应该再换车一次，如果小于13，则应一次走完。 由以上思路可以得到代码：
+#include &amp;lt;stdio.h&amp;gt; int main() { int n; while (scanf(&amp;quot;%d&amp;quot;, &amp;amp;n), n != 0) { if (n &amp;lt;= 4) { printf(&amp;quot;%d\n&amp;quot;, 10); continue; } if (n &amp;lt;= 8) { printf(&amp;quot;%d\n&amp;quot;, 10 + (n - 4) * 2); continue; } double sum = 0.0; while (n &amp;gt;= 8) { sum += 18; n -= 8; } //不断n-8直到剩余的小于8，其实也可以用余数来做 if (n &amp;lt;= 5) { sum += n * 2.</description>
+    </item>
     
     <item>
       <title>区间贪心学习笔记</title>
@@ -37,15 +167,6 @@ bool cmp(Interval a, Interval b) { if (a.x != b.x) { return a.x &amp;gt; b.x; } 
 python实现冒泡排序 list1 = [3,1,4,5,2] i = 1 j = 0 temp = 0 while i &amp;lt;= 4: i += 1 while j&amp;lt;=3: if list1[j]&amp;lt;list1[j+1]: pass elif list1[j]&amp;gt;list1[j+1]: temp = list1[j+1] list1[j+1] = list1[j] list1[j] = temp else: print(&#39;something went wrong&#39;) j += 1 j = 0 #要把J还原为0，否则J一直等于3 print(list1)  其中循环之后让j变回0非常重要
 3n+1猜想  卡拉兹猜想 如果n为偶数，那么把他砍掉一半，如果n为奇数，那么把3n+1砍掉一半
 n = int(input()) steps = 0 while n !</description>
-    </item>
-    
-    <item>
-      <title>Mysql笔记</title>
-      <link>https://lilacrainode.github.io/post/mysql%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Tue, 21 Jan 2020 18:32:50 +0800</pubDate>
-      
-      <guid>https://lilacrainode.github.io/post/mysql%E7%AC%94%E8%AE%B0/</guid>
-      <description>asc &amp;mdash;&amp;ndash; ascending order升序 desc &amp;mdash;&amp;ndash; descending order降序 set global interactive_timeout = 1000000;原来是120,为了防止长时间不使用之后断开连接，设置成了100000。  +&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;+&amp;mdash;&amp;mdash;&amp;mdash;-+ | Variable_name | Value | +&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;+&amp;mdash;&amp;mdash;&amp;mdash;-+ | connect_timeout | 10 | | delayed_insert_timeout | 300 | | have_statement_timeout | YES | | innodb_flush_log_at_timeout | 1 | | innodb_lock_wait_timeout | 120 | | innodb_rollback_on_timeout | OFF | | interactive_timeout | 120 | | lock_wait_timeout | 31536000 | | net_read_timeout | 30 | | net_write_timeout | 60 | | rpl_stop_slave_timeout | 31536000 | | slave_net_timeout | 60 | | wait_timeout | 28800 | +&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;+&amp;mdash;&amp;mdash;&amp;mdash;-+</description>
     </item>
     
   </channel>

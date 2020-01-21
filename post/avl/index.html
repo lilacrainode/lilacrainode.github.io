@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>AVL // My New Hugo Site</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.59.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://lilacrainode.github.io/css/main.min.61bb32028587f24ca28522d8d197970c7ef33284e5fffb45a75fcbbb2dbc4dcb.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="AVL"/>
+<meta name="twitter:description" content="某个结点的平衡因子的定义是左子树的高度减去右子树的高度，在平衡二叉树中平衡因子只可能为 -1，0，1.不可能为其他数值
+ LL型直接以根节点A为ROOT进行右旋，LR型先忽略根节点，将根节点的左子树进行左旋，旋转成为LL型AVL，再旋转LL型AVL
+#include &lt;stdio.h&gt; #include &lt;iostream&gt; #include &lt;algorithm&gt; using namespace std; int A[510]; bool flag = false; struct node { // int data; node *lchild; node *rchild; int height; int v; }; node *newNode(int v) //其中V为该结点的权值 { node *temp = new node; temp-&gt;lchild = temp-&gt;rchild = NULL; temp-&gt;v = v; return temp; } int getheight(node *root) { if (root == NULL) return 0; else return root-&gt;height; } void updateheight(node *root) { root-&gt;height = max(getheight(root-&gt;lchild), getheight(root-&gt;rchild)) &#43; 1; } void leftRotate(node *&amp;root) //左旋操作 { node *temp = root-&gt;rchild; //使用一个临时的指针指向root的右子树 root-&gt;rchild = temp-&gt;lchild; temp-&gt;lchild = root; updateheight(root); updateheight(temp); root = temp; } void rightrotate(node *root) //右旋操作 { node *temp = root-&gt;lchild; root-&gt;lchild = temp-&gt;rchild; temp-&gt;rchild = root; updateheight(root); updateheight(temp); root = temp; } int getBalanceHeight(node *root) //得到当前结点的权重 { return getheight(root-&gt;lchild) - getheight(root-&gt;rchild); } void insert(node *&amp;root, int v) // 传参的时候还是要加引用 { if (root == NULL) { root = newNode(v); return; } if (v &lt; root-&gt;v) { insert(root-&gt;lchild, v); updateheight(root); if (getBalanceHeight(root) == 2) { if (getBalanceHeight(root-&gt;lchild) == 1) { //如果是LL型的 rightrotate(root); } else if (getBalanceHeight(root-&gt;rchild) == -1) { leftRotate(root-&gt;lchild); rightrotate(root); } else { cout &lt;&lt; &quot;something went wrong&quot; &lt;&lt; endl; } } } else { insert(root-&gt;rchild, v); updateheight(root); if (getBalanceHeight(root) == -2) { if (getBalanceHeight(root-&gt;rchild) == 1) { //如果是RL型的 rightrotate(root-&gt;lchild); leftRotate(root); } else if (getBalanceHeight(root-&gt;rchild) == -1) { leftRotate(root); } else { cout &lt;&lt; &quot;something went wrong&quot; &lt;&lt; endl; } } } } node *create(int A[], int n) //返回的是指向根节点的指针，传入的是数组第一个位置的指针和需要插入的元素多少 { node *root = NULL; for (int i = 0; i &lt; n; i&#43;&#43;) { insert(root, A[i]); } return root; } void search1111(node *root, int x) { if (root == NULL) return; //没有找到，返回 if (root-&gt;v == x) { flag = true; } else if (x &lt; root-&gt;v) { search1111(root-&gt;lchild, x); } else if (x &gt;= root-&gt;v) { search1111(root-&gt;rchild, x); } else { cout &lt;&lt; &quot;something went wrong&quot; &lt;&lt; endl; } return; } int main() { int n, k; cin &gt;&gt; n &gt;&gt; k; for (int i = 0; i &lt; n; i&#43;&#43;) { scanf(&quot;%d&quot;, &amp;A[i]); } node *root = create(A, n); cin &gt;&gt; n; search1111(root, n); if (flag == true) { cout &lt;&lt; &quot;1&quot;; flag = false; } else { cout &lt;&lt; &quot;0&quot;; } for (int i = 1; i &lt; k; i&#43;&#43;) { scanf(&quot;%d&quot;, &amp;n); search1111(root, n); if (flag == true) { cout &lt;&lt; &quot; 1&quot;; flag = false; } else { cout &lt;&lt; &quot; 0&quot;; } } cout &lt;&lt; endl; return 0; }   "/>
+
+    <meta property="og:title" content="AVL" />
+<meta property="og:description" content="某个结点的平衡因子的定义是左子树的高度减去右子树的高度，在平衡二叉树中平衡因子只可能为 -1，0，1.不可能为其他数值
+ LL型直接以根节点A为ROOT进行右旋，LR型先忽略根节点，将根节点的左子树进行左旋，旋转成为LL型AVL，再旋转LL型AVL
+#include &lt;stdio.h&gt; #include &lt;iostream&gt; #include &lt;algorithm&gt; using namespace std; int A[510]; bool flag = false; struct node { // int data; node *lchild; node *rchild; int height; int v; }; node *newNode(int v) //其中V为该结点的权值 { node *temp = new node; temp-&gt;lchild = temp-&gt;rchild = NULL; temp-&gt;v = v; return temp; } int getheight(node *root) { if (root == NULL) return 0; else return root-&gt;height; } void updateheight(node *root) { root-&gt;height = max(getheight(root-&gt;lchild), getheight(root-&gt;rchild)) &#43; 1; } void leftRotate(node *&amp;root) //左旋操作 { node *temp = root-&gt;rchild; //使用一个临时的指针指向root的右子树 root-&gt;rchild = temp-&gt;lchild; temp-&gt;lchild = root; updateheight(root); updateheight(temp); root = temp; } void rightrotate(node *root) //右旋操作 { node *temp = root-&gt;lchild; root-&gt;lchild = temp-&gt;rchild; temp-&gt;rchild = root; updateheight(root); updateheight(temp); root = temp; } int getBalanceHeight(node *root) //得到当前结点的权重 { return getheight(root-&gt;lchild) - getheight(root-&gt;rchild); } void insert(node *&amp;root, int v) // 传参的时候还是要加引用 { if (root == NULL) { root = newNode(v); return; } if (v &lt; root-&gt;v) { insert(root-&gt;lchild, v); updateheight(root); if (getBalanceHeight(root) == 2) { if (getBalanceHeight(root-&gt;lchild) == 1) { //如果是LL型的 rightrotate(root); } else if (getBalanceHeight(root-&gt;rchild) == -1) { leftRotate(root-&gt;lchild); rightrotate(root); } else { cout &lt;&lt; &quot;something went wrong&quot; &lt;&lt; endl; } } } else { insert(root-&gt;rchild, v); updateheight(root); if (getBalanceHeight(root) == -2) { if (getBalanceHeight(root-&gt;rchild) == 1) { //如果是RL型的 rightrotate(root-&gt;lchild); leftRotate(root); } else if (getBalanceHeight(root-&gt;rchild) == -1) { leftRotate(root); } else { cout &lt;&lt; &quot;something went wrong&quot; &lt;&lt; endl; } } } } node *create(int A[], int n) //返回的是指向根节点的指针，传入的是数组第一个位置的指针和需要插入的元素多少 { node *root = NULL; for (int i = 0; i &lt; n; i&#43;&#43;) { insert(root, A[i]); } return root; } void search1111(node *root, int x) { if (root == NULL) return; //没有找到，返回 if (root-&gt;v == x) { flag = true; } else if (x &lt; root-&gt;v) { search1111(root-&gt;lchild, x); } else if (x &gt;= root-&gt;v) { search1111(root-&gt;rchild, x); } else { cout &lt;&lt; &quot;something went wrong&quot; &lt;&lt; endl; } return; } int main() { int n, k; cin &gt;&gt; n &gt;&gt; k; for (int i = 0; i &lt; n; i&#43;&#43;) { scanf(&quot;%d&quot;, &amp;A[i]); } node *root = create(A, n); cin &gt;&gt; n; search1111(root, n); if (flag == true) { cout &lt;&lt; &quot;1&quot;; flag = false; } else { cout &lt;&lt; &quot;0&quot;; } for (int i = 1; i &lt; k; i&#43;&#43;) { scanf(&quot;%d&quot;, &amp;n); search1111(root, n); if (flag == true) { cout &lt;&lt; &quot; 1&quot;; flag = false; } else { cout &lt;&lt; &quot; 0&quot;; } } cout &lt;&lt; endl; return 0; }   " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lilacrainode.github.io/post/avl/" />
+<meta property="article:published_time" content="2020-01-21T20:54:17+08:00" />
+<meta property="article:modified_time" content="2020-01-21T20:54:17+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://lilacrainode.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>My New Hugo Site</h1>
+      <p>雨初的博客</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">AVL</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 21, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <p>某个结点的平衡因子的定义是左子树的高度减去右子树的高度，在平衡二叉树中平衡因子只可能为 -1，0，1.不可能为其他数值</p>
+
+<ul>
+<li><p>LL型直接以根节点A为ROOT进行右旋，LR型先忽略根节点，将根节点的左子树进行左旋，旋转成为LL型AVL，再旋转LL型AVL</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+int A[510];
+bool flag = false;
+struct node
+{
+// int data;
+node *lchild;
+node *rchild;
+int height;
+int v;
+};
+
+node *newNode(int v) //其中V为该结点的权值
+{
+node *temp = new node;
+temp-&gt;lchild = temp-&gt;rchild = NULL;
+temp-&gt;v = v;
+return temp;
+}
+
+int getheight(node *root)
+{
+if (root == NULL)
+    return 0;
+else
+    return root-&gt;height;
+}
+
+void updateheight(node *root)
+{
+root-&gt;height = max(getheight(root-&gt;lchild), getheight(root-&gt;rchild)) + 1;
+}
+
+void leftRotate(node *&amp;root) //左旋操作
+{
+node *temp = root-&gt;rchild; //使用一个临时的指针指向root的右子树
+root-&gt;rchild = temp-&gt;lchild;
+temp-&gt;lchild = root;
+updateheight(root);
+updateheight(temp);
+root = temp;
+}
+
+void rightrotate(node *root) //右旋操作
+{
+node *temp = root-&gt;lchild;
+root-&gt;lchild = temp-&gt;rchild;
+temp-&gt;rchild = root;
+updateheight(root);
+updateheight(temp);
+root = temp;
+}
+
+int getBalanceHeight(node *root) //得到当前结点的权重
+{
+return getheight(root-&gt;lchild) - getheight(root-&gt;rchild);
+}
+
+void insert(node *&amp;root, int v) // 传参的时候还是要加引用
+{
+if (root == NULL)
+{
+    root = newNode(v);
+    return;
+}
+if (v &lt; root-&gt;v)
+{
+    insert(root-&gt;lchild, v);
+    updateheight(root);
+    if (getBalanceHeight(root) == 2)
+    {
+        if (getBalanceHeight(root-&gt;lchild) == 1)
+        {
+            //如果是LL型的
+            rightrotate(root);
+        }
+        else if (getBalanceHeight(root-&gt;rchild) == -1)
+        {
+            leftRotate(root-&gt;lchild);
+            rightrotate(root);
+        }
+        else
+        {
+            cout &lt;&lt; &quot;something went wrong&quot; &lt;&lt; endl;
+        }
+    }
+}
+else
+{
+    insert(root-&gt;rchild, v);
+    updateheight(root);
+    if (getBalanceHeight(root) == -2)
+    {
+        if (getBalanceHeight(root-&gt;rchild) == 1)
+        {
+            //如果是RL型的
+            rightrotate(root-&gt;lchild);
+            leftRotate(root);
+        }
+        else if (getBalanceHeight(root-&gt;rchild) == -1)
+        {
+            leftRotate(root);
+        }
+        else
+        {
+            cout &lt;&lt; &quot;something went wrong&quot; &lt;&lt; endl;
+        }
+    }
+}
+}
+
+node *create(int A[], int n) //返回的是指向根节点的指针，传入的是数组第一个位置的指针和需要插入的元素多少
+{
+node *root = NULL;
+for (int i = 0; i &lt; n; i++)
+{
+    insert(root, A[i]);
+}
+return root;
+}
+
+void search1111(node *root, int x)
+{
+if (root == NULL)
+    return; //没有找到，返回
+if (root-&gt;v == x)
+{
+    flag = true;
+}
+else if (x &lt; root-&gt;v)
+{
+    search1111(root-&gt;lchild, x);
+}
+else if (x &gt;= root-&gt;v)
+{
+    search1111(root-&gt;rchild, x);
+}
+else
+{
+    cout &lt;&lt; &quot;something went wrong&quot; &lt;&lt; endl;
+}
+
+return;
+}
+
+int main()
+{
+int n, k;
+cin &gt;&gt; n &gt;&gt; k;
+for (int i = 0; i &lt; n; i++)
+{
+    scanf(&quot;%d&quot;, &amp;A[i]);
+}
+node *root = create(A, n);
+cin &gt;&gt; n;
+search1111(root, n);
+if (flag == true)
+{
+    cout &lt;&lt; &quot;1&quot;;
+    flag = false;
+}
+else
+{
+    cout &lt;&lt; &quot;0&quot;;
+}
+for (int i = 1; i &lt; k; i++)
+{
+    scanf(&quot;%d&quot;, &amp;n);
+    search1111(root, n);
+    if (flag == true)
+    {
+        cout &lt;&lt; &quot; 1&quot;;
+        flag = false;
+    }
+    else
+    {
+        cout &lt;&lt; &quot; 0&quot;;
+    }
+}
+cout &lt;&lt; endl;
+return 0;
+}
+
+</code></pre></li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
