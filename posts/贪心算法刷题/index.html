@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="贪心算法刷题">
+<meta itemprop="description" content="题目 首先用笔计算可得，当公里数为13时分两次乘车的花费和只一次乘车的花费相等，都是30元，因此13公里为一个分界线 计算可得，如果只乘8公里的">
+
+
+<meta itemprop="datePublished" content="2020-01-21T20:43:09&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-21T20:43:09&#43;08:00" />
+<meta itemprop="wordCount" content="546">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="贪心算法刷题" />
+<meta property="og:description" content="题目 首先用笔计算可得，当公里数为13时分两次乘车的花费和只一次乘车的花费相等，都是30元，因此13公里为一个分界线 计算可得，如果只乘8公里的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lilacrainode.github.io/posts/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/" />
+<meta property="article:published_time" content="2020-01-21T20:43:09+08:00" />
+<meta property="article:modified_time" content="2020-01-21T20:43:09+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="贪心算法刷题"/>
+<meta name="twitter:description" content="题目 首先用笔计算可得，当公里数为13时分两次乘车的花费和只一次乘车的花费相等，都是30元，因此13公里为一个分界线 计算可得，如果只乘8公里的"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>贪心算法刷题</title>
+	<link rel="stylesheet" href="/style/normalize.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/chroma.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/animate.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/main.css" crossorigin="anonymous">
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://lilacrainode.github.io//posts">lilacrain</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+<a href="https://lilacrainode.github.io/about_me/">About</a>
+<a href="https://lilacrainode.github.io/friends/">friends</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<button id="menu-btn" class="hdr-btn" title="菜单"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu">
+		<h1>MENU</h1>
+		<ul>
+			<li><a href="https://lilacrainode.github.io/about_me/">About</a></li>
+			<li><a href="https://lilacrainode.github.io/friends/">friends</a></li>
+		</ul>
+	</div>
+
+
+<main class="site-main section-inner animated fadeIn faster">
+	<article class="thin">
+		<header class="post-header">
+			<div class="post-meta"><span>Jan 21, 2020</span></div>
+			<h1>贪心算法刷题</h1>
+		</header>
+		<div class="content">
+			<p><a href="http://codeup.cn/problem.php?cid=100000584&amp;pid=1">题目</a><br></p>
+
+<ol>
+<li>首先用笔计算可得，当公里数为13时分两次乘车的花费和只一次乘车的花费相等，都是30元，因此13公里为一个分界线</li>
+<li>计算可得，如果只乘8公里的车的话，总价格为10+4*2=18，<strong>平均一公里2.25元</strong>，而8公里之后每公里需要2.4元，由此可知，假设需要行驶的路程无限大，<strong>一定是每8公里换一次车最划算</strong>，明白这一点之后这个题目就好办多了，首先按照贪心算法的思路，可以想到，每次要从总里程数中减去8公里，然后车费加上18元，直到剩下的总里程小于8公里为止，再进行下一步。</li>
+
+<li><p>由此我们获得了一个最后的<strong>小于8公里的里程数a</strong>,而其实问题就转化为最后一步：“最后8+a”公里应该怎么安排。计算可得，当需要行驶13公里的时候，先行驶8公里再换车的价格为：<strong>20+5*2=30</strong>元，而一次行驶13公里的价格为：<strong>10+8+5*2.4=30</strong>元，相等。所以如果最后的8+a公里大于13，就应该再换车一次，如果小于13，则应一次走完。
+由以上思路可以得到代码：</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+int main()
+{
+int n;
+while (scanf(&quot;%d&quot;, &amp;n), n != 0)
+{
+    if (n &lt;= 4)
+    {
+        printf(&quot;%d\n&quot;, 10);
+        continue;
+    }
+    if (n &lt;= 8)
+    {
+        printf(&quot;%d\n&quot;, 10 + (n - 4) * 2);
+        continue;
+    }
+    double sum = 0.0;
+    while (n &gt;= 8)
+    {
+        sum += 18;
+        n -= 8;
+    } //不断n-8直到剩余的小于8，其实也可以用余数来做
+    if (n &lt;= 5)
+    {
+        sum += n * 2.4;
+    }
+    else if (n &lt;= 8)
+    {
+        sum += 10 + (n - 4) * 2;
+    }
+    if (sum - (int)sum == 0)
+        printf(&quot;%d\n&quot;, (int)sum); //此处是为了符合输出标准。
+    else
+        printf(&quot;%.1lf\n&quot;, sum);
+}
+return 0;
+}
+
+
+</code></pre></li>
+</ol>
+
+		</div>
+		<hr class="post-end">
+		<footer class="post-info">
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						 class="feather feather-file-text">
+					<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+					<polyline points="14 2 14 8 20 8"></polyline>
+					<line x1="16" y1="13" x2="8" y2="13"></line>
+					<line x1="16" y1="17" x2="8" y2="17"></line>
+					<polyline points="10 9 9 9 8 9"></polyline>
+				</svg>
+				546 字
+			</p>
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						 class="feather feather-calendar">
+					<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+					<line x1="16" y1="2" x2="16" y2="6"></line>
+					<line x1="8" y1="2" x2="8" y2="6"></line>
+					<line x1="3" y1="10" x2="21" y2="10"></line>
+				</svg>
+				2020-01-21 20:43 &#43;0800
+			</p>
+		</footer>
+	</article>
+	<div class="post-nav thin">
+		<a class="next-post" href="https://lilacrainode.github.io/posts/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
+			<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+																				fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+																				stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12"
+																																																				 x2="5"
+																																																				 y2="12"></line><polyline
+				points="12 19 5 12 12 5"></polyline></svg>&nbsp;新</span><br><span>滑动窗口</span>
+		</a>
+		<a class="prev-post" href="https://lilacrainode.github.io/posts/%E5%8C%BA%E9%97%B4%E8%B4%AA%E5%BF%83%E7%AC%94%E8%AE%B0/">
+			<span class="post-nav-label">旧&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24"
+																																height="24" viewBox="0 0 24 24" fill="none"
+																																stroke="currentColor" stroke-width="2"
+																																stroke-linecap="round" stroke-linejoin="round"
+																																class="feather feather-arrow-right"><line x1="5" y1="12"
+																																																					x2="19"
+																																																					y2="12"></line><polyline
+				points="12 5 19 12 12 19"></polyline></svg></span><br><span>区间贪心学习笔记</span>
+		</a>
+	</div>
+</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2020 <a href="https://lilacrainode.github.io/">雨初</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/fumeboy/example_blog_theme" target="_blank" rel="noopener">example_blog_theme</a> &#183; <a href="https://lilacrainode.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://lilacrainode.github.io/js/bundle.min.423768b7f8f7490526bda2fab0ad73904a743fbf2e61e667b622bedbab4e9c06.js" integrity="sha256-Qjdot/j3SQUmvaL6sK1zkEp0P78uYeZntiK+26tOnAY=" crossorigin="anonymous"></script>
+	
+</body>
+
+</html>

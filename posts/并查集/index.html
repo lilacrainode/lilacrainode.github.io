@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="并查集">
+<meta itemprop="description" content="count&ndash;的话，是一进去就减了 算法笔记P343 好朋友代码 #include &lt;stdio.h&gt; #include &lt;iostream&gt; #include &lt;algorithm&gt; using namespace std; const int N = 110; int father[N]; bool isRoot[N]; void Union(int a,int b); void init(int n); int findFather(int x); int main() { int n, m; cin">
+
+
+<meta itemprop="datePublished" content="2020-01-21T20:54:58&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-21T20:54:58&#43;08:00" />
+<meta itemprop="wordCount" content="1020">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="并查集" />
+<meta property="og:description" content="count&ndash;的话，是一进去就减了 算法笔记P343 好朋友代码 #include &lt;stdio.h&gt; #include &lt;iostream&gt; #include &lt;algorithm&gt; using namespace std; const int N = 110; int father[N]; bool isRoot[N]; void Union(int a,int b); void init(int n); int findFather(int x); int main() { int n, m; cin" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lilacrainode.github.io/posts/%E5%B9%B6%E6%9F%A5%E9%9B%86/" />
+<meta property="article:published_time" content="2020-01-21T20:54:58+08:00" />
+<meta property="article:modified_time" content="2020-01-21T20:54:58+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="并查集"/>
+<meta name="twitter:description" content="count&ndash;的话，是一进去就减了 算法笔记P343 好朋友代码 #include &lt;stdio.h&gt; #include &lt;iostream&gt; #include &lt;algorithm&gt; using namespace std; const int N = 110; int father[N]; bool isRoot[N]; void Union(int a,int b); void init(int n); int findFather(int x); int main() { int n, m; cin"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>并查集</title>
+	<link rel="stylesheet" href="/style/normalize.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/chroma.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/animate.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/main.css" crossorigin="anonymous">
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://lilacrainode.github.io//posts">lilacrain</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+<a href="https://lilacrainode.github.io/about_me/">About</a>
+<a href="https://lilacrainode.github.io/friends/">friends</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<button id="menu-btn" class="hdr-btn" title="菜单"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu">
+		<h1>MENU</h1>
+		<ul>
+			<li><a href="https://lilacrainode.github.io/about_me/">About</a></li>
+			<li><a href="https://lilacrainode.github.io/friends/">friends</a></li>
+		</ul>
+	</div>
+
+
+<main class="site-main section-inner animated fadeIn faster">
+	<article class="thin">
+		<header class="post-header">
+			<div class="post-meta"><span>Jan 21, 2020</span></div>
+			<h1>并查集</h1>
+		</header>
+		<div class="content">
+			
+
+<p>count&ndash;的话，是一进去就减了<br>
+算法笔记P343 好朋友代码</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+const int N = 110;
+int father[N];
+bool isRoot[N];
+void Union(int a,int b);
+void init(int n);
+int findFather(int x);
+int main()
+{
+    int n, m;
+    cin &gt;&gt; n &gt;&gt; m;
+    int a, b;
+    init(n);
+    while (m--)
+    {
+        scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+        Union(a, b);
+    }
+    for (int i = 1; i &lt;= n; i++)
+    {
+        isRoot[findFather(i)] = true;
+    }
+    int ans = 0;
+    for (int i = 1; i &lt;= n; i++)
+    {
+        if (isRoot[i])
+        {
+            ans++;
+        }
+    }
+    cout &lt;&lt; ans &lt;&lt; endl;
+         //&lt;&lt; endl;
+    return 0;
+}
+/*
+int findFather(int x)
+{
+    while (x != father[x])
+    {
+        x = father[x];
+    }
+    return x;
+}*/
+//以下是递归实现
+/*
+int findFather(int x)
+{
+    if (x == father[x])
+        return x;
+    else
+        return findFather(father[x]);
+}*/
+
+void Union(int a, int b)
+{
+    int faA = findFather(a);
+    int faB = findFather(b);
+    if (faA != faB)
+    {
+        father[faA] = faB; //合并这两个并查集
+        //其实这一句就是将A这个元素所在的并查集的父亲结点的父亲从其本身改为另一个并查集的父亲结点，这样就实现了两个并查集的合并
+    }
+    return;
+}
+
+//以下为进行路径压缩的findFather函数
+int findFather(int x)
+{
+    int temp = x; //因为x的值会改变，所以先把x的值存起来
+    while (father[x] != x)
+    {
+        x = father[x]; //跳出循环的时候x指向的是其所在并查集的父亲结点
+    }
+    while (father[temp] != temp)
+    {
+        int temp2 = father[temp]; //先建立一个临时变量储存temp的父亲结点
+        father[temp] = x;         //再次进行遍历，并将每个元素的父亲都设置为总的父亲结点
+        temp = temp2;
+    }
+    return x;
+}
+
+void init(int n)
+{
+    for (int i = 1; i &lt;= n; i++)
+    {
+        father[i] = i;
+        isRoot[i] = false;
+    }
+}
+</code></pre>
+
+<p><a href="http://codeup.cn/problem.php?cid=100000615&amp;pid=0">通信系统</a></p>
+
+<h4 id="这道题一定要注意里面的可能是一个环-如果是一个环的话就说明不和题意-应该是no">这道题一定要注意里面的可能是一个环，如果是一个环的话就说明不和题意，应该是NO<a href="#这道题一定要注意里面的可能是一个环-如果是一个环的话就说明不和题意-应该是no" class="anchor" aria-hidden="true">#</a></h4>
+
+<p><strong>如果输入的a,b的根节点相同的话就说明会形成一个环</strong></p>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+const int N = 100010;
+int father[N];
+bool flag = false;
+//bool isRoot[N];
+void Union(int a, int b);
+void init(int n);
+int findFather(int x);
+//bool usedornot[1010];
+int root[N];
+
+int main()
+{
+    int n, m;
+    int a, b;
+    //int tempfather;
+    //bool flag = true;
+    while (scanf(&quot;%d%d&quot;, &amp;n, &amp;m), (n + m))
+    {
+        init(n);
+        while (m--)
+        {
+            scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+            Union(a, b); //合并a,b所在的集合
+        }
+        for (int i = 1; i &lt;= n; i++)
+        {
+            root[findFather(i)] = 1;
+        }
+        int ans = 0;
+        for (int i = 1; i &lt;= n; i++)
+        {
+            ans += root[i];
+        }
+        if (flag)
+        {
+            flag = false;
+            cout &lt;&lt; &quot;No&quot; &lt;&lt; endl;
+        }
+        else
+        {
+            if (ans == 1)
+                cout &lt;&lt; &quot;Yes&quot; &lt;&lt; endl;
+            else
+                cout &lt;&lt; &quot;No&quot; &lt;&lt; endl;
+        }
+    }
+    return 0;
+}
+/*
+int findFather(int x)
+{
+    while (x != father[x])
+    {
+        x = father[x];
+    }
+    return x;
+}*/
+//以下是递归实现
+/*
+int findFather(int x)
+{
+    if (x == father[x])
+        return x;
+    else
+        return findFather(father[x]);
+}*/
+
+void Union(int a, int b)
+{
+    int faA = findFather(a);
+    int faB = findFather(b);
+    if (faA != faB)
+    {
+        father[faA] = faB; //合并这两个并查集
+        //其实这一句就是将A这个元素所在的并查集的父亲结点的父亲从其本身改为另一个并查集的父亲结点，这样就实现了两个并查集的合并
+    }
+    //else的情况是两个元素的父亲结点相同
+    else
+    {
+        flag = true;
+    }
+    return;
+}
+
+//以下为进行路径压缩的findFather函数
+
+int findFather(int x)
+{
+    int temp = x; //因为x的值会改变，所以先把x的值存起来
+    while (father[x] != x)
+    {
+        x = father[x]; //跳出循环的时候x指向的是其所在并查集的父亲结点
+    }
+    while (father[temp] != temp)
+    {
+        int temp2 = father[temp]; //先建立一个临时变量储存temp的父亲结点
+        father[temp] = x;         //再次进行遍历，并将每个元素的父亲都设置为总的父亲结点
+        temp = temp2;
+    }
+    return x;
+}
+//先不进行路径压缩
+void init(int n)
+{
+    for (int i = 1; i &lt;= n; i++)
+    {
+        father[i] = i;
+        //isRoot[i] = false;
+        //usedornot[i] = false;
+        root[i] = 0;
+    }
+}
+</code></pre>
+
+		</div>
+		<hr class="post-end">
+		<footer class="post-info">
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						 class="feather feather-file-text">
+					<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+					<polyline points="14 2 14 8 20 8"></polyline>
+					<line x1="16" y1="13" x2="8" y2="13"></line>
+					<line x1="16" y1="17" x2="8" y2="17"></line>
+					<polyline points="10 9 9 9 8 9"></polyline>
+				</svg>
+				1020 字
+			</p>
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						 class="feather feather-calendar">
+					<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+					<line x1="16" y1="2" x2="16" y2="6"></line>
+					<line x1="8" y1="2" x2="8" y2="6"></line>
+					<line x1="3" y1="10" x2="21" y2="10"></line>
+				</svg>
+				2020-01-21 20:54 &#43;0800
+			</p>
+		</footer>
+	</article>
+	<div class="post-nav thin">
+		<a class="next-post" href="https://lilacrainode.github.io/posts/%E4%BA%8C%E5%8F%89%E5%A0%86/">
+			<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+																				fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+																				stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12"
+																																																				 x2="5"
+																																																				 y2="12"></line><polyline
+				points="12 19 5 12 12 5"></polyline></svg>&nbsp;新</span><br><span>二叉堆</span>
+		</a>
+		<a class="prev-post" href="https://lilacrainode.github.io/posts/avl/">
+			<span class="post-nav-label">旧&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24"
+																																height="24" viewBox="0 0 24 24" fill="none"
+																																stroke="currentColor" stroke-width="2"
+																																stroke-linecap="round" stroke-linejoin="round"
+																																class="feather feather-arrow-right"><line x1="5" y1="12"
+																																																					x2="19"
+																																																					y2="12"></line><polyline
+				points="12 5 19 12 12 19"></polyline></svg></span><br><span>AVL</span>
+		</a>
+	</div>
+</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2020 <a href="https://lilacrainode.github.io/">雨初</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/fumeboy/example_blog_theme" target="_blank" rel="noopener">example_blog_theme</a> &#183; <a href="https://lilacrainode.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://lilacrainode.github.io/js/bundle.min.423768b7f8f7490526bda2fab0ad73904a743fbf2e61e667b622bedbab4e9c06.js" integrity="sha256-Qjdot/j3SQUmvaL6sK1zkEp0P78uYeZntiK+26tOnAY=" crossorigin="anonymous"></script>
+	
+</body>
+
+</html>

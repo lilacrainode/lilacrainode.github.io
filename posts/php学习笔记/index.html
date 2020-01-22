@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="Php学习笔记">
+<meta itemprop="description" content="php没有创建变量的命令，变量会在首次为其赋值时被创建 函数以外的变量只能在函数之外访问，不能在函数之内访问，具有GLOBAL作用域 常量是自动">
+
+
+<meta itemprop="datePublished" content="2020-01-21T20:58:04&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-21T20:58:04&#43;08:00" />
+<meta itemprop="wordCount" content="434">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="Php学习笔记" />
+<meta property="og:description" content="php没有创建变量的命令，变量会在首次为其赋值时被创建 函数以外的变量只能在函数之外访问，不能在函数之内访问，具有GLOBAL作用域 常量是自动" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lilacrainode.github.io/posts/php%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
+<meta property="article:published_time" content="2020-01-21T20:58:04+08:00" />
+<meta property="article:modified_time" content="2020-01-21T20:58:04+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Php学习笔记"/>
+<meta name="twitter:description" content="php没有创建变量的命令，变量会在首次为其赋值时被创建 函数以外的变量只能在函数之外访问，不能在函数之内访问，具有GLOBAL作用域 常量是自动"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>Php学习笔记</title>
+	<link rel="stylesheet" href="/style/normalize.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/chroma.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/animate.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/main.css" crossorigin="anonymous">
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://lilacrainode.github.io//posts">lilacrain</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+<a href="https://lilacrainode.github.io/about_me/">About</a>
+<a href="https://lilacrainode.github.io/friends/">friends</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<button id="menu-btn" class="hdr-btn" title="菜单"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu">
+		<h1>MENU</h1>
+		<ul>
+			<li><a href="https://lilacrainode.github.io/about_me/">About</a></li>
+			<li><a href="https://lilacrainode.github.io/friends/">friends</a></li>
+		</ul>
+	</div>
+
+
+<main class="site-main section-inner animated fadeIn faster">
+	<article class="thin">
+		<header class="post-header">
+			<div class="post-meta"><span>Jan 21, 2020</span></div>
+			<h1>Php学习笔记</h1>
+		</header>
+		<div class="content">
+			<ul>
+<li>php没有创建变量的命令，变量会在首次为其赋值时被创建</li>
+<li>函数以外的变量只能在<strong>函数之外</strong>访问，不能在函数之内访问，具有GLOBAL作用域</li>
+<li>常量是自动全局的，可以贯穿整个脚本使用，<strong>在函数内部也可以用</strong>，定义常量的时候要用define</li>
+<li>字符串运算符中有一个<a href="https://www.w3school.com.cn/php/php_operators.asp">点运算符</a>,可以拼接两个字符串</li>
+<li>PHP的函数传参的时候可以<a href="https://www.w3school.com.cn/php/php_functions.asp">使用默认的参数值</a>如果调用函数的时候没有进行传参，那么将会使用默认的值</li>
+<li>php在名为$GLOBALS[index]的数组中存储了所有的全局变量，变量的名字就是数组的键</li>
+<li>$_GET 是通过 URL 参数传递到当前脚本的变量数组。</li>
+
+<li><p>$_POST 是通过 HTTP POST 传递到当前脚本的变量数组。</p></li>
+
+<li><p>在函数传参的时候可以传入多于定义的参数数量的参数，func_get_arg(0);用来获取下标为0的参数</p></li>
+
+<li><p>在PHP的函数里面，使用<strong>/</strong>开头的路径的话指定的是在电脑的文件系统的位置</p></li>
+
+<li><p>PHP 不能 print &ldquo;{$i++}&rdquo;;</p></li>
+
+<li><p>mysqli_connect_errno()返回上一次连接错误的错误代码，如果没有错误就返回0</p></li>
+
+<li><p>$string = implode(&ldquo;a&rdquo;,$arr) 用来将arr数组里面的东西拼接起来，中间用a来分割</p></li>
+</ul>
+
+		</div>
+		<hr class="post-end">
+		<footer class="post-info">
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						 class="feather feather-file-text">
+					<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+					<polyline points="14 2 14 8 20 8"></polyline>
+					<line x1="16" y1="13" x2="8" y2="13"></line>
+					<line x1="16" y1="17" x2="8" y2="17"></line>
+					<polyline points="10 9 9 9 8 9"></polyline>
+				</svg>
+				434 字
+			</p>
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						 class="feather feather-calendar">
+					<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+					<line x1="16" y1="2" x2="16" y2="6"></line>
+					<line x1="8" y1="2" x2="8" y2="6"></line>
+					<line x1="3" y1="10" x2="21" y2="10"></line>
+				</svg>
+				2020-01-21 20:58 &#43;0800
+			</p>
+		</footer>
+	</article>
+	<div class="post-nav thin">
+		<a class="next-post" href="https://lilacrainode.github.io/posts/mysql%E7%AC%94%E8%AE%B0/">
+			<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+																				fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+																				stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12"
+																																																				 x2="5"
+																																																				 y2="12"></line><polyline
+				points="12 19 5 12 12 5"></polyline></svg>&nbsp;新</span><br><span>Mysql笔记</span>
+		</a>
+		<a class="prev-post" href="https://lilacrainode.github.io/posts/%E5%93%88%E6%9B%BC%E5%A4%AB%E6%A0%91/">
+			<span class="post-nav-label">旧&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24"
+																																height="24" viewBox="0 0 24 24" fill="none"
+																																stroke="currentColor" stroke-width="2"
+																																stroke-linecap="round" stroke-linejoin="round"
+																																class="feather feather-arrow-right"><line x1="5" y1="12"
+																																																					x2="19"
+																																																					y2="12"></line><polyline
+				points="12 5 19 12 12 19"></polyline></svg></span><br><span>哈曼夫树</span>
+		</a>
+	</div>
+</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2020 <a href="https://lilacrainode.github.io/">雨初</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/fumeboy/example_blog_theme" target="_blank" rel="noopener">example_blog_theme</a> &#183; <a href="https://lilacrainode.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://lilacrainode.github.io/js/bundle.min.423768b7f8f7490526bda2fab0ad73904a743fbf2e61e667b622bedbab4e9c06.js" integrity="sha256-Qjdot/j3SQUmvaL6sK1zkEp0P78uYeZntiK+26tOnAY=" crossorigin="anonymous"></script>
+	
+</body>
+
+</html>

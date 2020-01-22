@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="AVL">
+<meta itemprop="description" content="某个结点的平衡因子的定义是左子树的高度减去右子树的高度，在平衡二叉树中平衡因子只可能为 -1，0，1.不可能为其他数值 LL型直接以根节点A为R">
+
+
+<meta itemprop="datePublished" content="2020-01-21T20:54:17&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-21T20:54:17&#43;08:00" />
+<meta itemprop="wordCount" content="644">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="AVL" />
+<meta property="og:description" content="某个结点的平衡因子的定义是左子树的高度减去右子树的高度，在平衡二叉树中平衡因子只可能为 -1，0，1.不可能为其他数值 LL型直接以根节点A为R" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lilacrainode.github.io/posts/avl/" />
+<meta property="article:published_time" content="2020-01-21T20:54:17+08:00" />
+<meta property="article:modified_time" content="2020-01-21T20:54:17+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="AVL"/>
+<meta name="twitter:description" content="某个结点的平衡因子的定义是左子树的高度减去右子树的高度，在平衡二叉树中平衡因子只可能为 -1，0，1.不可能为其他数值 LL型直接以根节点A为R"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>AVL</title>
+	<link rel="stylesheet" href="/style/normalize.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/chroma.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/animate.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/main.css" crossorigin="anonymous">
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://lilacrainode.github.io//posts">lilacrain</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+<a href="https://lilacrainode.github.io/about_me/">About</a>
+<a href="https://lilacrainode.github.io/friends/">friends</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<button id="menu-btn" class="hdr-btn" title="菜单"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu">
+		<h1>MENU</h1>
+		<ul>
+			<li><a href="https://lilacrainode.github.io/about_me/">About</a></li>
+			<li><a href="https://lilacrainode.github.io/friends/">friends</a></li>
+		</ul>
+	</div>
+
+
+<main class="site-main section-inner animated fadeIn faster">
+	<article class="thin">
+		<header class="post-header">
+			<div class="post-meta"><span>Jan 21, 2020</span></div>
+			<h1>AVL</h1>
+		</header>
+		<div class="content">
+			<p>某个结点的平衡因子的定义是左子树的高度减去右子树的高度，在平衡二叉树中平衡因子只可能为 -1，0，1.不可能为其他数值</p>
+
+<ul>
+<li><p>LL型直接以根节点A为ROOT进行右旋，LR型先忽略根节点，将根节点的左子树进行左旋，旋转成为LL型AVL，再旋转LL型AVL</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+int A[510];
+bool flag = false;
+struct node
+{
+// int data;
+node *lchild;
+node *rchild;
+int height;
+int v;
+};
+
+node *newNode(int v) //其中V为该结点的权值
+{
+node *temp = new node;
+temp-&gt;lchild = temp-&gt;rchild = NULL;
+temp-&gt;v = v;
+return temp;
+}
+
+int getheight(node *root)
+{
+if (root == NULL)
+    return 0;
+else
+    return root-&gt;height;
+}
+
+void updateheight(node *root)
+{
+root-&gt;height = max(getheight(root-&gt;lchild), getheight(root-&gt;rchild)) + 1;
+}
+
+void leftRotate(node *&amp;root) //左旋操作
+{
+node *temp = root-&gt;rchild; //使用一个临时的指针指向root的右子树
+root-&gt;rchild = temp-&gt;lchild;
+temp-&gt;lchild = root;
+updateheight(root);
+updateheight(temp);
+root = temp;
+}
+
+void rightrotate(node *root) //右旋操作
+{
+node *temp = root-&gt;lchild;
+root-&gt;lchild = temp-&gt;rchild;
+temp-&gt;rchild = root;
+updateheight(root);
+updateheight(temp);
+root = temp;
+}
+
+int getBalanceHeight(node *root) //得到当前结点的权重
+{
+return getheight(root-&gt;lchild) - getheight(root-&gt;rchild);
+}
+
+void insert(node *&amp;root, int v) // 传参的时候还是要加引用
+{
+if (root == NULL)
+{
+    root = newNode(v);
+    return;
+}
+if (v &lt; root-&gt;v)
+{
+    insert(root-&gt;lchild, v);
+    updateheight(root);
+    if (getBalanceHeight(root) == 2)
+    {
+        if (getBalanceHeight(root-&gt;lchild) == 1)
+        {
+            //如果是LL型的
+            rightrotate(root);
+        }
+        else if (getBalanceHeight(root-&gt;rchild) == -1)
+        {
+            leftRotate(root-&gt;lchild);
+            rightrotate(root);
+        }
+        else
+        {
+            cout &lt;&lt; &quot;something went wrong&quot; &lt;&lt; endl;
+        }
+    }
+}
+else
+{
+    insert(root-&gt;rchild, v);
+    updateheight(root);
+    if (getBalanceHeight(root) == -2)
+    {
+        if (getBalanceHeight(root-&gt;rchild) == 1)
+        {
+            //如果是RL型的
+            rightrotate(root-&gt;lchild);
+            leftRotate(root);
+        }
+        else if (getBalanceHeight(root-&gt;rchild) == -1)
+        {
+            leftRotate(root);
+        }
+        else
+        {
+            cout &lt;&lt; &quot;something went wrong&quot; &lt;&lt; endl;
+        }
+    }
+}
+}
+
+node *create(int A[], int n) //返回的是指向根节点的指针，传入的是数组第一个位置的指针和需要插入的元素多少
+{
+node *root = NULL;
+for (int i = 0; i &lt; n; i++)
+{
+    insert(root, A[i]);
+}
+return root;
+}
+
+void search1111(node *root, int x)
+{
+if (root == NULL)
+    return; //没有找到，返回
+if (root-&gt;v == x)
+{
+    flag = true;
+}
+else if (x &lt; root-&gt;v)
+{
+    search1111(root-&gt;lchild, x);
+}
+else if (x &gt;= root-&gt;v)
+{
+    search1111(root-&gt;rchild, x);
+}
+else
+{
+    cout &lt;&lt; &quot;something went wrong&quot; &lt;&lt; endl;
+}
+
+return;
+}
+
+int main()
+{
+int n, k;
+cin &gt;&gt; n &gt;&gt; k;
+for (int i = 0; i &lt; n; i++)
+{
+    scanf(&quot;%d&quot;, &amp;A[i]);
+}
+node *root = create(A, n);
+cin &gt;&gt; n;
+search1111(root, n);
+if (flag == true)
+{
+    cout &lt;&lt; &quot;1&quot;;
+    flag = false;
+}
+else
+{
+    cout &lt;&lt; &quot;0&quot;;
+}
+for (int i = 1; i &lt; k; i++)
+{
+    scanf(&quot;%d&quot;, &amp;n);
+    search1111(root, n);
+    if (flag == true)
+    {
+        cout &lt;&lt; &quot; 1&quot;;
+        flag = false;
+    }
+    else
+    {
+        cout &lt;&lt; &quot; 0&quot;;
+    }
+}
+cout &lt;&lt; endl;
+return 0;
+}
+
+</code></pre></li>
+</ul>
+
+		</div>
+		<hr class="post-end">
+		<footer class="post-info">
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						 class="feather feather-file-text">
+					<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+					<polyline points="14 2 14 8 20 8"></polyline>
+					<line x1="16" y1="13" x2="8" y2="13"></line>
+					<line x1="16" y1="17" x2="8" y2="17"></line>
+					<polyline points="10 9 9 9 8 9"></polyline>
+				</svg>
+				644 字
+			</p>
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						 class="feather feather-calendar">
+					<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+					<line x1="16" y1="2" x2="16" y2="6"></line>
+					<line x1="8" y1="2" x2="8" y2="6"></line>
+					<line x1="3" y1="10" x2="21" y2="10"></line>
+				</svg>
+				2020-01-21 20:54 &#43;0800
+			</p>
+		</footer>
+	</article>
+	<div class="post-nav thin">
+		<a class="next-post" href="https://lilacrainode.github.io/posts/%E5%B9%B6%E6%9F%A5%E9%9B%86/">
+			<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+																				fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+																				stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12"
+																																																				 x2="5"
+																																																				 y2="12"></line><polyline
+				points="12 19 5 12 12 5"></polyline></svg>&nbsp;新</span><br><span>并查集</span>
+		</a>
+		<a class="prev-post" href="https://lilacrainode.github.io/posts/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">
+			<span class="post-nav-label">旧&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24"
+																																height="24" viewBox="0 0 24 24" fill="none"
+																																stroke="currentColor" stroke-width="2"
+																																stroke-linecap="round" stroke-linejoin="round"
+																																class="feather feather-arrow-right"><line x1="5" y1="12"
+																																																					x2="19"
+																																																					y2="12"></line><polyline
+				points="12 5 19 12 12 19"></polyline></svg></span><br><span>滑动窗口</span>
+		</a>
+	</div>
+</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2020 <a href="https://lilacrainode.github.io/">雨初</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/fumeboy/example_blog_theme" target="_blank" rel="noopener">example_blog_theme</a> &#183; <a href="https://lilacrainode.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://lilacrainode.github.io/js/bundle.min.423768b7f8f7490526bda2fab0ad73904a743fbf2e61e667b622bedbab4e9c06.js" integrity="sha256-Qjdot/j3SQUmvaL6sK1zkEp0P78uYeZntiK+26tOnAY=" crossorigin="anonymous"></script>
+	
+</body>
+
+</html>

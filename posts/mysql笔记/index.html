@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="Mysql笔记">
+<meta itemprop="description" content="asc &mdash;&ndash; ascending order升序 desc &mdash;&ndash; descending order降序 set global interactive_timeout = 1000000;原来是120,为了防止长时间不使用之后断开连接，设置成了100000。 &#43;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;&#43;&mdash;&mdash;&mdash;-&#43; | Variable_name">
+
+
+<meta itemprop="datePublished" content="2020-01-21T20:58:04&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-21T20:58:04&#43;08:00" />
+<meta itemprop="wordCount" content="542">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="Mysql笔记" />
+<meta property="og:description" content="asc &mdash;&ndash; ascending order升序 desc &mdash;&ndash; descending order降序 set global interactive_timeout = 1000000;原来是120,为了防止长时间不使用之后断开连接，设置成了100000。 &#43;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;&#43;&mdash;&mdash;&mdash;-&#43; | Variable_name" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lilacrainode.github.io/posts/mysql%E7%AC%94%E8%AE%B0/" />
+<meta property="article:published_time" content="2020-01-21T20:58:04+08:00" />
+<meta property="article:modified_time" content="2020-01-21T20:58:04+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mysql笔记"/>
+<meta name="twitter:description" content="asc &mdash;&ndash; ascending order升序 desc &mdash;&ndash; descending order降序 set global interactive_timeout = 1000000;原来是120,为了防止长时间不使用之后断开连接，设置成了100000。 &#43;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;&#43;&mdash;&mdash;&mdash;-&#43; | Variable_name"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>Mysql笔记</title>
+	<link rel="stylesheet" href="/style/normalize.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/chroma.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/animate.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="/style/main.css" crossorigin="anonymous">
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://lilacrainode.github.io//posts">lilacrain</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+<a href="https://lilacrainode.github.io/about_me/">About</a>
+<a href="https://lilacrainode.github.io/friends/">friends</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<button id="menu-btn" class="hdr-btn" title="菜单"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu">
+		<h1>MENU</h1>
+		<ul>
+			<li><a href="https://lilacrainode.github.io/about_me/">About</a></li>
+			<li><a href="https://lilacrainode.github.io/friends/">friends</a></li>
+		</ul>
+	</div>
+
+
+<main class="site-main section-inner animated fadeIn faster">
+	<article class="thin">
+		<header class="post-header">
+			<div class="post-meta"><span>Jan 21, 2020</span></div>
+			<h1>Mysql笔记</h1>
+		</header>
+		<div class="content">
+			<ul>
+<li>asc &mdash;&ndash; ascending order升序</li>
+<li>desc &mdash;&ndash; descending order降序</li>
+<li>set global interactive_timeout = 1000000;<strong>原来是120</strong>,为了防止长时间不使用之后断开连接，设置成了100000。</li>
+</ul>
+
+<blockquote>
+<blockquote>
+<p>+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;-+<br>
+| Variable_name | Value |<br>
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;-+<br>
+| connect_timeout | 10 |<br>
+| delayed_insert_timeout | 300 |<br>
+| have_statement_timeout | YES |<br>
+| innodb_flush_log_at_timeout | 1 |<br>
+| innodb_lock_wait_timeout | 120 |<br>
+| innodb_rollback_on_timeout | OFF |<br>
+| interactive_timeout | 120 |<br>
+| lock_wait_timeout | 31536000 |<br>
+| net_read_timeout | 30 |<br>
+| net_write_timeout | 60 |<br>
+| rpl_stop_slave_timeout | 31536000 |<br>
+| slave_net_timeout | 60 |<br>
+| wait_timeout | 28800 |<br>
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;-+<br></p>
+</blockquote>
+</blockquote>
+
+<ul>
+<li><strong>=</strong>和<strong>&lt;=&gt;</strong>的区别是后面的那个可以比较两个NULL值，而如果用前面的那个来比较的话返回的值是NULL</li>
+<li>SQL语句中如果需要输出一个变量，要用<strong>{}</strong>将其括起来，否则PHP将会认为是要输出<strong>$i后面的字符</strong>这个变量</li>
+<li>mysqli_fetch_row($result);获取select * from t1的结果中的一条</li>
+<li>mysqli_fetch_row 用索引数组（下标为1，2，3，4，5）获取结果，而mysqli_fetch_assoc 用关联数组的方法获取结果，array(2) { [&ldquo;id&rdquo;]=&gt; string(1) &ldquo;5&rdquo; [&ldquo;info&rdquo;]=&gt; string(6) &ldquo;雨初&rdquo; }</li>
+<li>mysqli_escape_string($link,$temp);可以将$temp字符串里面需要转义的字符全部加上反斜线进行转义</li>
+<li>mysqli_multi_query 返回的值是false还是true取决于<strong>第一条语句有没有成功执行</strong>，如果第一条语句成功执行了，无论后面的语句有没有成功执行都返回<strong>true</strong></li>
+<li><a href="https://zhidao.baidu.com/question/1307269512536729659.html">https://zhidao.baidu.com/question/1307269512536729659.html</a> 我用这个链接里面的方法把phpstrom里面的错误检查关掉了</li>
+</ul>
+
+		</div>
+		<hr class="post-end">
+		<footer class="post-info">
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						 class="feather feather-file-text">
+					<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+					<polyline points="14 2 14 8 20 8"></polyline>
+					<line x1="16" y1="13" x2="8" y2="13"></line>
+					<line x1="16" y1="17" x2="8" y2="17"></line>
+					<polyline points="10 9 9 9 8 9"></polyline>
+				</svg>
+				542 字
+			</p>
+			<p>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						 class="feather feather-calendar">
+					<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+					<line x1="16" y1="2" x2="16" y2="6"></line>
+					<line x1="8" y1="2" x2="8" y2="6"></line>
+					<line x1="3" y1="10" x2="21" y2="10"></line>
+				</svg>
+				2020-01-21 20:58 &#43;0800
+			</p>
+		</footer>
+	</article>
+	<div class="post-nav thin">
+		<a class="next-post" href="https://lilacrainode.github.io/posts/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+			<span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+																				fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+																				stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12"
+																																																				 x2="5"
+																																																				 y2="12"></line><polyline
+				points="12 19 5 12 12 5"></polyline></svg>&nbsp;新</span><br><span>正则表达式</span>
+		</a>
+		<a class="prev-post" href="https://lilacrainode.github.io/posts/php%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+			<span class="post-nav-label">旧&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24"
+																																height="24" viewBox="0 0 24 24" fill="none"
+																																stroke="currentColor" stroke-width="2"
+																																stroke-linecap="round" stroke-linejoin="round"
+																																class="feather feather-arrow-right"><line x1="5" y1="12"
+																																																					x2="19"
+																																																					y2="12"></line><polyline
+				points="12 5 19 12 12 19"></polyline></svg></span><br><span>Php学习笔记</span>
+		</a>
+	</div>
+</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2020 <a href="https://lilacrainode.github.io/">雨初</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/fumeboy/example_blog_theme" target="_blank" rel="noopener">example_blog_theme</a> &#183; <a href="https://lilacrainode.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://lilacrainode.github.io/js/bundle.min.423768b7f8f7490526bda2fab0ad73904a743fbf2e61e667b622bedbab4e9c06.js" integrity="sha256-Qjdot/j3SQUmvaL6sK1zkEp0P78uYeZntiK+26tOnAY=" crossorigin="anonymous"></script>
+	
+</body>
+
+</html>
