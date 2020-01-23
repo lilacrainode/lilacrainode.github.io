@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>最长回文字符串 | 雨初的博客</title>
-    <meta property="og:title" content="最长回文字符串 - 雨初的博客">
+    <title>Acwing1270数列区间最大值线段树解法 | 雨初的博客</title>
+    <meta property="og:title" content="Acwing1270数列区间最大值线段树解法 - 雨初的博客">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-01-21T20:56:13&#43;08:00'>
+    <meta property="article:published_time" content='2020-01-23T14:40:29&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-01-21T20:56:13&#43;08:00'>
+    <meta property="article:modified_time" content='2020-01-23T14:40:29&#43;08:00'>
         
     <meta name="Keywords" content="">
-    <meta name="description" content="最长回文字符串">
+    <meta name="description" content="Acwing1270数列区间最大值线段树解法">
         
     <meta name="author" content="雨初">
-    <meta property="og:url" content="https://lilacrainode.github.io/post/%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+    <meta property="og:url" content="https://lilacrainode.github.io/post/Acwing1270%E6%95%B0%E5%88%97%E5%8C%BA%E9%97%B4%E6%9C%80%E5%A4%A7%E5%80%BC-%E7%BA%BF%E6%AE%B5%E6%A0%91%E8%A7%A3%E6%B3%95/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -77,13 +77,106 @@
                 <div class="col-8" id="main">
                     
 <div class="res-cons">
-    
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents"></nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
     <article class="post">
         <header>
-            <h1 class="post-title">最长回文字符串</h1>
+            <h1 class="post-title">Acwing1270数列区间最大值线段树解法</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年1月21日
+            2020年1月23日
         </date>
         
         
@@ -93,35 +186,14 @@
         </div>
         
         
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
+        </div>
+        
         <div class="post-content">
-            <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">ULL <span style="color:#900;font-weight:bold">get</span>(ULL h[], <span style="color:#458;font-weight:bold">int</span> l, <span style="color:#458;font-weight:bold">int</span> r)
-{
-    <span style="color:#000;font-weight:bold">return</span> h[r] <span style="color:#000;font-weight:bold">-</span> h[l <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>] <span style="color:#000;font-weight:bold">*</span> p[r <span style="color:#000;font-weight:bold">-</span> l <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>];
-}
-</code></pre></td></tr></table>
-</div>
-</div><p>这个get函数有点难懂,举个例子这个字符串长度为5,是&quot;abcde&rdquo;</p>
-<p>传入的参数:l = 3, r = 5,即需要返回cde字符串的哈希值.如果直接用131进制来想的话可能会有点蒙,不妨用<strong>10进制</strong>来整理思路.可以知道如果用10进制来想的话,整个字符串的哈希值为12345,需要返回的目标哈希值为345.其实就是<strong>12345-12*10^3.</strong></p>
-<p>P[N]是用来存储转换进制需要乘的数字的,如果按照10进制来想,里面存储的数字就是{1,10,100,1000&hellip;&hellip;.}</p>
-<p>那么就可以理清思路写出return的数字了</p>
-<p>从开头到下标为r的字符串的哈希值是h[r],要想得到(l,r)区间的字符串的哈希值,即为:</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">    <span style="color:#000;font-weight:bold">return</span> h[r] <span style="color:#000;font-weight:bold">-</span> h[l <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>] <span style="color:#000;font-weight:bold">*</span> p[r <span style="color:#000;font-weight:bold">-</span> l <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>];
-</code></pre></td></tr></table>
-</div>
-</div><p>二分查找中mid的值是当前的需要寻找的离中点的距离</p>
+            <p><a href="https://www.acwing.com/problem/content/1272/">原题链接</a></p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -189,73 +261,79 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;iostream&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;stdio.h&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;string.h&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
 </span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;algorithm&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
-</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
-<span style="color:#000;font-weight:bold">typedef</span> <span style="color:#458;font-weight:bold">unsigned</span> <span style="color:#458;font-weight:bold">long</span> <span style="color:#458;font-weight:bold">long</span> ULL;
-<span style="color:#000;font-weight:bold">const</span> <span style="color:#458;font-weight:bold">int</span> N <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">110</span>, base <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">131</span>; <span style="color:#998;font-style:italic">//base用来存储进制
-</span><span style="color:#998;font-style:italic"></span>ULL hl[N], hr[N], p[N];        <span style="color:#998;font-style:italic">//其中hl用来存储正序的每一位的哈希值，hr用来存储逆序的每一位的哈希值，p用来存储base^i的值
-</span><span style="color:#998;font-style:italic"></span><span style="color:#458;font-weight:bold">char</span> str[N];
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span><span style="color:#999;font-weight:bold;font-style:italic">#</span><span style="color:#999;font-weight:bold;font-style:italic">include</span> <span style="color:#999;font-weight:bold;font-style:italic">&lt;limits.h&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">
+</span><span style="color:#999;font-weight:bold;font-style:italic"></span>
+<span style="color:#000;font-weight:bold">using</span> <span style="color:#000;font-weight:bold">namespace</span> std;
 
-ULL <span style="color:#900;font-weight:bold">get</span>(ULL h[], <span style="color:#458;font-weight:bold">int</span> l, <span style="color:#458;font-weight:bold">int</span> r)
+<span style="color:#000;font-weight:bold">const</span> <span style="color:#458;font-weight:bold">int</span> N <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">100010</span>;
+<span style="color:#458;font-weight:bold">int</span> n, m, w[N];
+<span style="color:#000;font-weight:bold">struct</span> <span style="color:#458;font-weight:bold">Node</span>
 {
-    <span style="color:#000;font-weight:bold">return</span> h[r] <span style="color:#000;font-weight:bold">-</span> h[l <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>] <span style="color:#000;font-weight:bold">*</span> p[r <span style="color:#000;font-weight:bold">-</span> l <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>];
-} <span style="color:#998;font-style:italic">//get函数用来返回[l,r]字符串的哈希值
-</span><span style="color:#998;font-style:italic"></span>
+    <span style="color:#458;font-weight:bold">int</span> l, r;
+    <span style="color:#458;font-weight:bold">int</span> maxv;
+} tr[N <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">4</span>];
+
+<span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">pushup</span>(<span style="color:#458;font-weight:bold">int</span> u)
+{
+    tr[u].maxv <span style="color:#000;font-weight:bold">=</span> max(tr[u <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">1</span>].maxv, tr[u <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#099">1</span>].maxv);
+}
+
+<span style="color:#458;font-weight:bold">void</span> <span style="color:#900;font-weight:bold">build</span>(<span style="color:#458;font-weight:bold">int</span> u, <span style="color:#458;font-weight:bold">int</span> l, <span style="color:#458;font-weight:bold">int</span> r)
+{
+    <span style="color:#000;font-weight:bold">if</span> (l <span style="color:#000;font-weight:bold">=</span><span style="color:#000;font-weight:bold">=</span> r)
+    {
+        tr[u].l <span style="color:#000;font-weight:bold">=</span> l;
+        tr[u].r <span style="color:#000;font-weight:bold">=</span> r;
+        tr[u].maxv <span style="color:#000;font-weight:bold">=</span> w[r];
+        <span style="color:#000;font-weight:bold">return</span>;
+    }
+    tr[u].l <span style="color:#000;font-weight:bold">=</span> l;
+    tr[u].r <span style="color:#000;font-weight:bold">=</span> r; <span style="color:#998;font-style:italic">// 这两句一定不能漏写了，否则段错误就很难debug
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#998;font-style:italic">// int mid = tr[u].l + tr[u].r &gt;&gt; 1; // mid是用来确定两边的区间的，写错了！
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#458;font-weight:bold">int</span> mid <span style="color:#000;font-weight:bold">=</span> l <span style="color:#000;font-weight:bold">+</span> r <span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#099">1</span>; <span style="color:#998;font-style:italic">// 这样写才对
+</span><span style="color:#998;font-style:italic"></span>    build(u <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">1</span>, l, mid), build(u <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#099">1</span>, mid <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>, r);
+    pushup(u);
+}
+
+<span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">query</span>(<span style="color:#458;font-weight:bold">int</span> u, <span style="color:#458;font-weight:bold">int</span> l, <span style="color:#458;font-weight:bold">int</span> r)
+{
+    <span style="color:#998;font-style:italic">// if(tr[u].l == tr[u].r) return tr[u].maxv; // 又写错了，和build的返回条件弄混了，应该是当前区间包含需要查找的区间才返回。l和r在整个查询过程中都没有改变
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">if</span> (tr[u].l <span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">=</span> l <span style="color:#000;font-weight:bold">&amp;</span><span style="color:#000;font-weight:bold">&amp;</span> tr[u].r <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">=</span> r)
+        <span style="color:#000;font-weight:bold">return</span> tr[u].maxv; <span style="color:#998;font-style:italic">// 如果当前结点表示的区间完全被需要查找的区间包含，直接返回
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#458;font-weight:bold">int</span> mid <span style="color:#000;font-weight:bold">=</span> tr[u].l <span style="color:#000;font-weight:bold">+</span> tr[u].r <span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#099">1</span>;
+    <span style="color:#458;font-weight:bold">int</span> res <span style="color:#000;font-weight:bold">=</span> INT_MIN;
+    <span style="color:#000;font-weight:bold">if</span> (l <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">=</span> mid)
+        res <span style="color:#000;font-weight:bold">=</span> query(u <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">1</span>, l, r);
+    <span style="color:#000;font-weight:bold">if</span> (r <span style="color:#000;font-weight:bold">&gt;</span> mid)
+        <span style="color:#998;font-style:italic">// res = max(res, query(u &lt;&lt; 1 | 1, mid + 1, r)); // 写错了！又弄混了，l,r在query过程中不会改变的
+</span><span style="color:#998;font-style:italic"></span>        res <span style="color:#000;font-weight:bold">=</span> max(res, query(u <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> <span style="color:#099">1</span> <span style="color:#000;font-weight:bold">|</span> <span style="color:#099">1</span>, l, r));
+    <span style="color:#000;font-weight:bold">return</span> res;
+}
+
 <span style="color:#458;font-weight:bold">int</span> <span style="color:#900;font-weight:bold">main</span>()
 {
-    hl[<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
-    hr[<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
-    <span style="color:#458;font-weight:bold">int</span> mid;
-    <span style="color:#458;font-weight:bold">int</span> result <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
-    <span style="color:#000;font-weight:bold">while</span> (scanf(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">%s</span><span style="color:#d14">&#34;</span>, str <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>), strcmp(str <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>, <span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">END</span><span style="color:#d14">&#34;</span>))
+    cin <span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&gt;</span> n <span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&gt;</span> m;
+    <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>; i <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">=</span> n; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
+        scanf(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">%d</span><span style="color:#d14">&#34;</span>, <span style="color:#000;font-weight:bold">&amp;</span>w[i]);
+    build(<span style="color:#099">1</span>, <span style="color:#099">1</span>, n);
+    <span style="color:#458;font-weight:bold">int</span> x, y;
+    <span style="color:#000;font-weight:bold">while</span> (m<span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">-</span>)
     {
-        <span style="color:#458;font-weight:bold">int</span> len <span style="color:#000;font-weight:bold">=</span> strlen(str <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>); <span style="color:#998;font-style:italic">//记录录入的字符串的长度
-</span><span style="color:#998;font-style:italic"></span>        <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> len <span style="color:#000;font-weight:bold">*</span> <span style="color:#099">2</span>; i <span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#099">0</span>; i <span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">=</span> <span style="color:#099">2</span>)
-        {
-            <span style="color:#998;font-style:italic">//将每两个字符的中间补上空格
-</span><span style="color:#998;font-style:italic"></span>            str[i] <span style="color:#000;font-weight:bold">=</span> str[i <span style="color:#000;font-weight:bold">/</span> <span style="color:#099">2</span>];
-            str[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>] <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">z</span><span style="color:#d14">&#39;</span> <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>;
-        }
-        len <span style="color:#000;font-weight:bold">*</span><span style="color:#000;font-weight:bold">=</span> <span style="color:#099">2</span>;
-        p[<span style="color:#099">0</span>] <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>; <span style="color:#998;font-style:italic">//记录变换时需要乘的数的数组的第一位是1
-</span><span style="color:#998;font-style:italic"></span>        <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>, j <span style="color:#000;font-weight:bold">=</span> len ; i <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">=</span> len; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>, j<span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">-</span>)
-        {<span style="color:#998;font-style:italic">//abacacbaaaab
-</span><span style="color:#998;font-style:italic"></span>            p[i] <span style="color:#000;font-weight:bold">=</span> p[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>] <span style="color:#000;font-weight:bold">*</span> base;
-            hl[i] <span style="color:#000;font-weight:bold">=</span> hl[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>] <span style="color:#000;font-weight:bold">*</span> base <span style="color:#000;font-weight:bold">+</span> str[i] <span style="color:#000;font-weight:bold">-</span> <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">a</span><span style="color:#d14">&#39;</span> <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>;
-            hr[i] <span style="color:#000;font-weight:bold">=</span> hr[i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>] <span style="color:#000;font-weight:bold">*</span> base <span style="color:#000;font-weight:bold">+</span> str[j] <span style="color:#000;font-weight:bold">-</span> <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">a</span><span style="color:#d14">&#39;</span> <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>; <span style="color:#998;font-style:italic">//相当于将字符串反转，将最后一个元素的下标当作1，并重新将哈希值存入数组
-</span><span style="color:#998;font-style:italic"></span>        }
-        <span style="color:#000;font-weight:bold">for</span> (<span style="color:#458;font-weight:bold">int</span> i <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1</span>; i <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">=</span> len; i<span style="color:#000;font-weight:bold">+</span><span style="color:#000;font-weight:bold">+</span>)
-        {
-            <span style="color:#458;font-weight:bold">int</span> l <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>, r <span style="color:#000;font-weight:bold">=</span> min(i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>, len <span style="color:#000;font-weight:bold">-</span> i);
-            <span style="color:#000;font-weight:bold">while</span> (l <span style="color:#000;font-weight:bold">&lt;</span> r)
-            {
-                mid <span style="color:#000;font-weight:bold">=</span> (l <span style="color:#000;font-weight:bold">+</span> r <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>) <span style="color:#000;font-weight:bold">&gt;</span><span style="color:#000;font-weight:bold">&gt;</span> <span style="color:#099">1</span>;
-                <span style="color:#000;font-weight:bold">if</span> (get(hl, i <span style="color:#000;font-weight:bold">-</span> mid, i <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>) <span style="color:#000;font-weight:bold">!</span><span style="color:#000;font-weight:bold">=</span> get(hr, len <span style="color:#000;font-weight:bold">-</span> (mid <span style="color:#000;font-weight:bold">+</span> i) <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>, len <span style="color:#000;font-weight:bold">-</span> (i <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>) <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>))
-                    r <span style="color:#000;font-weight:bold">=</span> mid <span style="color:#000;font-weight:bold">-</span> <span style="color:#099">1</span>;
-                <span style="color:#000;font-weight:bold">else</span>
-                    l <span style="color:#000;font-weight:bold">=</span> mid;
-            } <span style="color:#998;font-style:italic">//A#B#C#D#F#G#H#
-</span><span style="color:#998;font-style:italic"></span>            <span style="color:#000;font-weight:bold">if</span> (str[i<span style="color:#000;font-weight:bold">-</span>l] <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">z</span><span style="color:#d14">&#39;</span>)
-            {
-                result <span style="color:#000;font-weight:bold">=</span> max(result, l <span style="color:#000;font-weight:bold">+</span> <span style="color:#099">1</span>);
-            }
-            <span style="color:#000;font-weight:bold">else</span>
-            {
-                result <span style="color:#000;font-weight:bold">=</span> max(result,l);
-            }
-        }
-        cout <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> result <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl
-             <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#000;font-weight:bold">&lt;</span> endl;
-        result <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>;
+        scanf(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">%d%d</span><span style="color:#d14">&#34;</span>, <span style="color:#000;font-weight:bold">&amp;</span>x, <span style="color:#000;font-weight:bold">&amp;</span>y);
+        printf(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">%d</span><span style="color:#d14">\n</span><span style="color:#d14">&#34;</span>, query(<span style="color:#099">1</span>, x, y));
     }
-
     <span style="color:#000;font-weight:bold">return</span> <span style="color:#099">0</span>;
 }
+
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -265,7 +343,7 @@ ULL <span style="color:#900;font-weight:bold">get</span>(ULL h[], <span style="c
 <div class="post-archive">
     <ul class="post-copyright">
         <li><strong>原文作者：</strong><a rel="author" href="https://lilacrainode.github.io/">雨初</a></li>
-        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://lilacrainode.github.io/post/%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2/">https://lilacrainode.github.io/post/%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2/</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://lilacrainode.github.io/post/Acwing1270%E6%95%B0%E5%88%97%E5%8C%BA%E9%97%B4%E6%9C%80%E5%A4%A7%E5%80%BC-%E7%BA%BF%E6%AE%B5%E6%A0%91%E8%A7%A3%E6%B3%95/">https://lilacrainode.github.io/post/Acwing1270%E6%95%B0%E5%88%97%E5%8C%BA%E9%97%B4%E6%9C%80%E5%A4%A7%E5%80%BC-%E7%BA%BF%E6%AE%B5%E6%A0%91%E8%A7%A3%E6%B3%95/</a></li>
         <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
     </ul>
 </div>
@@ -279,15 +357,15 @@ ULL <span style="color:#900;font-weight:bold">get</span>(ULL h[], <span style="c
     <h2>See Also</h2>
     <ul class="listing">
         
+        <li><a href="/post/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%92%8C%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A8%A1%E6%9D%BF%E9%A2%98/">树状数组和线段树模板题</a></li>
+        
+        <li><a href="/post/%E5%93%88%E6%9B%BC%E5%A4%AB%E6%A0%91/">哈曼夫树</a></li>
+        
+        <li><a href="/post/%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2/">最长回文字符串</a></li>
+        
         <li><a href="/post/%E4%BA%8C%E5%8F%89%E5%A0%86/">二叉堆</a></li>
         
         <li><a href="/post/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a></li>
-        
-        <li><a href="/post/AVL/">AVL</a></li>
-        
-        <li><a href="/post/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/">滑动窗口</a></li>
-        
-        <li><a href="/post/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/">贪心算法刷题</a></li>
         
     </ul>
 </div>
