@@ -26,7 +26,7 @@
       <pubDate>Thu, 23 Jan 2020 12:00:19 +0800</pubDate>
       
       <guid>https://lilacrainode.github.io/post/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%92%8C%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A8%A1%E6%9D%BF%E9%A2%98/</guid>
-      <description>树状数组会比线段树写起来简单，树状数组能解决的问题线段树一定能解决 模板题-动态求连续区间和 树状数组 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 #include &amp;lt;cstdio&amp;gt;#include &amp;lt;cstring&amp;gt;#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt; using namespace std; const int N = 100010; int n, m; int a[N], tr[N]; int lowbit(int x) { return x &amp;amp; -x; } void add(int x, int v) { for (int i = x; i &amp;lt;=</description>
+      <description>树状数组会比线段树写起来简单，树状数组能解决的问题线段树一定能解决 线段树要比树状数组慢1倍左右，树状数组1秒能解决的问题线段树可能需要2秒 模板题-动态求连续区间和 树状数组 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 #include &amp;lt;cstdio&amp;gt;#include &amp;lt;cstring&amp;gt;#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;</description>
     </item>
     
     <item>
