@@ -6,17 +6,35 @@
     <description>Recent content in Tags on 雨初的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 23 Jan 2020 14:40:29 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jan 2020 22:07:02 +0800</lastBuildDate>
     
 	<atom:link href="https://lilacrainode.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>树状数组</title>
+      <link>https://lilacrainode.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Thu, 23 Jan 2020 22:07:02 +0800</pubDate>
+      
+      <guid>https://lilacrainode.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>算法</title>
       <link>https://lilacrainode.github.io/tags/%E7%AE%97%E6%B3%95/</link>
-      <pubDate>Thu, 23 Jan 2020 14:40:29 +0800</pubDate>
+      <pubDate>Thu, 23 Jan 2020 22:07:02 +0800</pubDate>
       
       <guid>https://lilacrainode.github.io/tags/%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>线段树</title>
+      <link>https://lilacrainode.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</link>
+      <pubDate>Thu, 23 Jan 2020 14:40:29 +0800</pubDate>
+      
+      <guid>https://lilacrainode.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/</guid>
       <description></description>
     </item>
     
