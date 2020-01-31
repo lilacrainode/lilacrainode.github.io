@@ -201,6 +201,18 @@
         <li><a href="#硬链接">硬链接</a></li>
       </ul>
     </li>
+    <li><a href="#打包压缩">打包压缩</a>
+      <ul>
+        <li><a href="#打包">打包</a></li>
+        <li><a href="#压缩">压缩</a></li>
+      </ul>
+    </li>
+    <li><a href="#软件安装">软件安装</a>
+      <ul>
+        <li><a href="#通过apt安装卸载软件">通过apt安装/卸载软件</a></li>
+        <li><a href="#配置软件源">配置软件源</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -276,7 +288,7 @@
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp 源文件 .
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cp 源文件 .
 </code></pre></td></tr></table>
 </div>
 </div><p>就可以</p>
@@ -290,7 +302,7 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -r <span style="color:#0086b3">test</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">rm -r <span style="color:#0086b3">test</span>
 cp -r a <span style="color:#0086b3">test</span>
 </code></pre></td></tr></table>
 </div>
@@ -312,7 +324,7 @@ cp -r a <span style="color:#0086b3">test</span>
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">grep -n aaaa 123.txt //在123.txt中查找aaaa这个字符串并将包含该字符串的每一行的行数显示出来
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">grep -n aaaa 123.txt //在123.txt中查找aaaa这个字符串并将包含该字符串的每一行的行数显示出来
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -333,7 +345,7 @@ cp -r a <span style="color:#0086b3">test</span>
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -lh //h选项表示可以将文件的大小以人类可读的形势展示（kb,mb,gb）,还有
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ls -lh //h选项表示可以将文件的大小以人类可读的形势展示（kb,mb,gb）,还有
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -348,7 +360,7 @@ cp -r a <span style="color:#0086b3">test</span>
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -lh | more // 这个命令将ls -lh的结果more，如果ls -lh返回的结果过多的话这样做可以避免ls -lh的结果在一屏显示的尴尬
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ls -lh | more // 这个命令将ls -lh的结果more，如果ls -lh返回的结果过多的话这样做可以避免ls -lh的结果在一屏显示的尴尬
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="shutdown">shutdown</h2>
@@ -362,7 +374,7 @@ cp -r a <span style="color:#0086b3">test</span>
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">shutdown -c
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">shutdown -c
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -382,7 +394,7 @@ cp -r a <span style="color:#0086b3">test</span>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#998;font-style:italic"># 重新启动操作系统，其中 now 表示现在</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#998;font-style:italic"># 重新启动操作系统，其中 now 表示现在</span>
 $ shutdown -r now
 <span style="color:#998;font-style:italic"># 立刻关机，其中 now 表示现在</span> 
 $ shutdown now
@@ -416,7 +428,7 @@ $ shutdown -c
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ifconfig | grep inet
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ifconfig | grep inet
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -432,7 +444,7 @@ $ shutdown -c
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh <span style="color:#000;font-weight:bold">[</span>-p port<span style="color:#000;font-weight:bold">]</span> user@remote
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ssh <span style="color:#000;font-weight:bold">[</span>-p port<span style="color:#000;font-weight:bold">]</span> user@remote
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -466,7 +478,7 @@ $ shutdown -c
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-copy-id 用户名@远程服务器地址
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ssh-copy-id 用户名@远程服务器地址
 </code></pre></td></tr></table>
 </div>
 </div><p>就可以让远程服务器记住sshkey,之后再登录可以免密码登录</p>
@@ -546,7 +558,7 @@ $ shutdown -c
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">groupadd 组名  <span style="color:#998;font-style:italic"># 要注意要sudo才有权限添加组</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">groupadd 组名  <span style="color:#998;font-style:italic"># 要注意要sudo才有权限添加组</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>之后要确认是否添加成功可以</p>
@@ -555,7 +567,7 @@ $ shutdown -c
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat /etc/group  <span style="color:#998;font-style:italic"># 如果添加成功的话可以在最后一行看到添加的组信息</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cat /etc/group  <span style="color:#998;font-style:italic"># 如果添加成功的话可以在最后一行看到添加的组信息</span>
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -573,7 +585,7 @@ $ shutdown -c
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">useradd -m -g 组 新建用户名    <span style="color:#998;font-style:italic"># 添加新用户</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">useradd -m -g 组 新建用户名    <span style="color:#998;font-style:italic"># 添加新用户</span>
 <span style="color:#998;font-style:italic"># -m表示自动建立用户家目录 （如果忘记输入，就需要我们自己给这个用户创建家目录了）</span>
 <span style="color:#998;font-style:italic"># -g表示指定用户所在的组，否则会建立一个和用户名同名的组</span>
 passwd 用户名    <span style="color:#998;font-style:italic"># 设置用户密码，如果是普通用户，直接用passwd可以修改自己的账户密码</span>
@@ -588,7 +600,7 @@ passwd 用户名    <span style="color:#998;font-style:italic"># 设置用户密
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">userdel -r 用户名 <span style="color:#998;font-style:italic"># -r选项会自动删除用户家目录</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">userdel -r 用户名 <span style="color:#998;font-style:italic"># -r选项会自动删除用户家目录</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>建议使用userdel的时候都要加上-r选项</p>
@@ -600,7 +612,7 @@ passwd 用户名    <span style="color:#998;font-style:italic"># 设置用户密
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">userdel: zhangsan 邮件池 <span style="color:#000;font-weight:bold">(</span>/var/mail/zhangsan<span style="color:#000;font-weight:bold">)</span> 未找到
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">userdel: zhangsan 邮件池 <span style="color:#000;font-weight:bold">(</span>/var/mail/zhangsan<span style="color:#000;font-weight:bold">)</span> 未找到
 </code></pre></td></tr></table>
 </div>
 </div><p>这是因为这个文件本来就不存在，这时候zhangsan这个用户已经被成功删除了，忽略这条提示信息即可</p>
@@ -613,7 +625,7 @@ passwd 用户名    <span style="color:#998;font-style:italic"># 设置用户密
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">id <span style="color:#000;font-weight:bold">[</span>用户名<span style="color:#000;font-weight:bold">]</span>    <span style="color:#998;font-style:italic"># 查看用户UID和GID信息</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">id <span style="color:#000;font-weight:bold">[</span>用户名<span style="color:#000;font-weight:bold">]</span>    <span style="color:#998;font-style:italic"># 查看用户UID和GID信息</span>
 <span style="color:#000;font-weight:bold">[</span>uid和gid<span style="color:#000;font-weight:bold">(</span>百度百科<span style="color:#000;font-weight:bold">)</span><span style="color:#000;font-weight:bold">]</span><span style="color:#000;font-weight:bold">(</span>https://zhidao.baidu.com/question/293402784.html<span style="color:#000;font-weight:bold">)</span>
 </code></pre></td></tr></table>
 </div>
@@ -634,7 +646,7 @@ gid在 <strong>/etc/group</strong> 这个文件下查看</p>
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">yuchu@yuchu-virtual-machine:~$ who
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yuchu@yuchu-virtual-machine:~$ who
 yuchu :0 2020-01-28 11:22 <span style="color:#000;font-weight:bold">(</span>:0<span style="color:#000;font-weight:bold">)</span> <span style="color:#998;font-style:italic"># 这里输出中的(:0)说明yuchu这个账户是在这台电脑登录的</span>
 zhangsan pts/2 2020-01-29 22:00 <span style="color:#000;font-weight:bold">(</span>192.168.32.1<span style="color:#000;font-weight:bold">)</span>
 </code></pre></td></tr></table>
@@ -658,7 +670,7 @@ zhangsan pts/2 2020-01-29 22:00 <span style="color:#000;font-weight:bold">(</spa
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">usermod -g 组 用户名 <span style="color:#998;font-style:italic"># 用来修改用户的主组（passwd中的GID）</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">usermod -g 组 用户名 <span style="color:#998;font-style:italic"># 用来修改用户的主组（passwd中的GID）</span>
 <span style="color:#998;font-style:italic"># 注意修改主组是小g</span>
 usermod -G 组 用户名 <span style="color:#998;font-style:italic"># 用来修改用户的附加组</span>
 <span style="color:#998;font-style:italic"># 注意修改附加组是大G</span>
@@ -676,7 +688,7 @@ usermod -s /bin/bash 用户名 <span style="color:#998;font-style:italic"># 修�
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">usermod -G sudo 用户名
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">usermod -G sudo 用户名
 </code></pre></td></tr></table>
 </div>
 </div><p>将该用户添加到 <em>sudo</em> 附加组中</p>
@@ -692,7 +704,7 @@ usermod -s /bin/bash 用户名 <span style="color:#998;font-style:italic"># 修�
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">usermod -s /bin/bash 用户名
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">usermod -s /bin/bash 用户名
 </code></pre></td></tr></table>
 </div>
 </div><p>来添加</p>
@@ -710,7 +722,7 @@ usermod -s /bin/bash 用户名 <span style="color:#998;font-style:italic"># 修�
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">which ls
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">which ls
 <span style="color:#998;font-style:italic"># 输出</span>
 <span style="color:#998;font-style:italic"># /bin/ls</span>
 which useradd
@@ -743,7 +755,7 @@ which useradd
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">su - 用户名 <span style="color:#998;font-style:italic"># 切换用户，并且切换目录</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">su - 用户名 <span style="color:#998;font-style:italic"># 切换用户，并且切换目录</span>
 <span style="color:#998;font-style:italic"># - 可以切换到用户家目录，否则保持位置不变）</span>
 </code></pre></td></tr></table>
 </div>
@@ -759,7 +771,7 @@ which useradd
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chown 用户名 文件名|目录名
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">chown 用户名 文件名|目录名
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -771,7 +783,7 @@ which useradd
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chgrp -R 组名 文件名|目录名
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">chgrp -R 组名 文件名|目录名
 <span style="color:#998;font-style:italic"># 加上-R选项递归修改文件|目录的组</span>
 </code></pre></td></tr></table>
 </div>
@@ -784,7 +796,7 @@ which useradd
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod -R <span style="color:#099">755</span> 文件名|目录名
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">chmod -R <span style="color:#099">755</span> 文件名|目录名
 <span style="color:#998;font-style:italic"># 加上-R递归修改文件权限</span>
 </code></pre></td></tr></table>
 </div>
@@ -801,7 +813,7 @@ which useradd
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">df -h  <span style="color:#998;font-style:italic"># disk free显示磁盘剩余空间</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">df -h  <span style="color:#998;font-style:italic"># disk free显示磁盘剩余空间</span>
 du -h <span style="color:#000;font-weight:bold">[</span>目录名<span style="color:#000;font-weight:bold">]</span>    <span style="color:#998;font-style:italic"># disk usage显示目录下的文件大小</span>
 <span style="color:#998;font-style:italic"># -h 选项的含义是以人性化的形式显示大小</span>
 </code></pre></td></tr></table>
@@ -832,7 +844,7 @@ du -h <span style="color:#000;font-weight:bold">[</span>目录名<span style="co
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">yuchu@yuchu-virtual-machine:~/桌面$ df -h 
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">yuchu@yuchu-virtual-machine:~/桌面$ df -h 
 文件系统 容量 已用 可用 已用% 挂载点
 udev 1.5G <span style="color:#099">0</span> 1.5G 0% /dev
 tmpfs 293M 2.0M 292M 1% /run
@@ -866,7 +878,7 @@ tmpfs 293M 40K 293M 1% /run/user/1000
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ps aux    <span style="color:#998;font-style:italic"># process status 查看进程的详细状况</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ps aux    <span style="color:#998;font-style:italic"># process status 查看进程的详细状况</span>
 top   <span style="color:#998;font-style:italic"># 动态显示运行中的进程并且排序</span>
  <span style="color:#0086b3">kill</span> <span style="color:#000;font-weight:bold">[</span>-9<span style="color:#000;font-weight:bold">]</span> 进程代号  <span style="color:#998;font-style:italic"># 终止指定代号的进程，-9表示强行终止</span>
 </code></pre></td></tr></table>
@@ -968,6 +980,135 @@ top   <span style="color:#998;font-style:italic"># 动态显示运行中的进�
 </ul>
 </blockquote>
 </blockquote>
+<h2 id="打包压缩">打包压缩</h2>
+<h3 id="打包">打包</h3>
+<ul>
+<li><em>tar</em> 是linux中最常用的 <strong>备份工具</strong> ，此命令可以 <strong>把一系列文件</strong> 打包到 <strong>一个大文件中</strong> ，也可以把一个 <strong>打包的大文件恢复成一系列文件</strong></li>
+</ul>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#998;font-style:italic"># 打包文件</span>
+tar -cvf 打包文件.tar 被打包的文件/路径 ...
+<span style="color:#998;font-style:italic"># 解包文件</span>
+tar -xvf 打包文件.tar
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><em>tar</em> 选项说明
+| 选项 | 含义 |
+| &mdash; | &mdash; |
+| c | 生成档案文件,创建打包文件 |
+| x | 解开档案文件 |
+| v | 列出归档解档的详细过程,显示进度 |
+| f | 指定档案文件名称,  <strong>f后面一定是.tar文件</strong> ,所以必须 <strong>放选项最后</strong> |
+| -C | 解压缩到指定目录,注意: <strong>要解压缩到的目录必须存在</strong> |
+| -z | 调用gzip将打包后的文件进行压缩,生成 <code>XXX.tar.gz</code> 文件 |
+| -j | 调用bzip2将打包后的文件进行压缩,生成 <code>XXX.tar.bz2</code> 文件 |</li>
+</ul>
+<blockquote>
+<p>注意:</p>
+<ul>
+<li><em>f</em> 选项必须放在最后,其他选项顺序可以随意</li>
+<li><em>tar</em> 这个命令 <strong>只负责打包不负责压缩</strong></li>
+</ul>
+</blockquote>
+<h3 id="压缩">压缩</h3>
+<ol>
+<li>gzip</li>
+</ol>
+<ul>
+<li>tar 与 gzip 命令结合使用可以实现文件 <strong>打包和压缩</strong>
+<ul>
+<li><code>tar</code> 只负责打包文件,但不压缩</li>
+<li>用 <code>gzip</code> 压缩 <code>tar</code> 打包后的文件,其拓展名一般用 <code>xxx.tar.gz</code></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>在linux中,最常见的压缩文件格式就是 <code>xxx.tar.gz</code></p>
+</blockquote>
+<ul>
+<li>在 <code>tar</code> 命令中有一个选项 <code>-z</code> 可以调用 <code>gzip</code> ,从而可以方便地实现压缩和解压缩的功能</li>
+<li>命令格式如下:</li>
+</ul>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#998;font-style:italic"># 压缩文件</span>
+tar -zcvf 打包文件.tar.gz 被压缩的文件/路径
+<span style="color:#998;font-style:italic"># 解压缩文件</span>
+tar -zxvf 打包文件.tar.gz
+<span style="color:#998;font-style:italic"># 解压缩到指定路径</span>
+tar -zxvf 打包文件.tar.gz -C 目标路径
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>bzip2(bziptwo)</li>
+</ol>
+<ul>
+<li><code>tar</code> 和 <code>bzip2</code> 命令结合可以实现文件打包和压缩(用法和gzip一样)</li>
+<li>在 <code>tar</code> 命令中有一个 <code>-j</code> 选项可以调用 <code>bzip2</code> ,从而可以方便地实现压缩和解压缩的功能</li>
+<li>bzip2压缩得到的文件的后缀是 <code>.tar.bz2</code>
+| 选项 | 含义 |
+| &ndash; | &ndash; |
+| -C | 解压缩到指定目录,注意: <strong>要解压缩到的目录必须存在</strong> |</li>
+</ul>
+<h2 id="软件安装">软件安装</h2>
+<h3 id="通过apt安装卸载软件">通过apt安装/卸载软件</h3>
+<ul>
+<li>apt是 <code>Advanced Packaging Tool</code> ,是linux下的一款安装包管理工具</li>
+<li>可以在终端中方便地安装、卸载、更新软件包</li>
+</ul>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#998;font-style:italic"># 1.安装软件</span>
+sudo apt install 软件包
+<span style="color:#998;font-style:italic"># 2.卸载软件</span>
+sudo apt remove 软件名
+<span style="color:#998;font-style:italic"># 3.更新已安装的包</span>
+sudo apt upgrade
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>安装一个比top更强大的进程管理器htop</li>
+</ul>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt install htop
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="配置软件源">配置软件源</h3>
+<blockquote>
+<p>所谓镜像源，就是所有服务器的内容是相同的（镜像），但是根据所在位置的不同，国内服务器通常速度会更快一些</p>
+</blockquote>
+<ul>
+<li>图形界面下配置软件源：系统工具 -&gt; 软件和更新-&gt; Ubuntu软件</li>
+<li>命令行下配置软件源===&gt; <a href="https://blog.csdn.net/fml091/article/details/84558257">链接</a></li>
+</ul>
 
         </div>
 
