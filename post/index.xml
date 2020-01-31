@@ -2,174 +2,174 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 小钟的博客</title>
-    <link>https://lilacrainode.github.io/post/</link>
+    <link>https://smallzhong.github.io/post/</link>
     <description>Recent content in Posts on 小钟的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 29 Jan 2020 11:50:15 +0800</lastBuildDate>
     
-	<atom:link href="https://lilacrainode.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://smallzhong.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Linux笔记</title>
-      <link>https://lilacrainode.github.io/post/linux%E7%AC%94%E8%AE%B0/</link>
+      <link>https://smallzhong.github.io/post/linux%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Wed, 29 Jan 2020 11:50:15 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/linux%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://smallzhong.github.io/post/linux%E7%AC%94%E8%AE%B0/</guid>
       <description>touch touch 如果文件不存在，创建一个文件，如果文件已经存在，将 文件的修改日期改到最新 在linux下，同一个目录中的文件和目录 不允许重名 mkdir mkdir命令的-p选项可以递归创建目录，即可以创建多重目录 rm rm命令删除文件之后文件不会出现在回收站中 rm命令的 -r 选项可以删除文件夹， -f 选项表示强制删</description>
     </item>
     
     <item>
       <title>前缀和的时间复杂度并不是0(n)</title>
-      <link>https://lilacrainode.github.io/post/%E5%89%8D%E7%BC%80%E5%92%8C%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</link>
+      <link>https://smallzhong.github.io/post/%E5%89%8D%E7%BC%80%E5%92%8C%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</link>
       <pubDate>Fri, 24 Jan 2020 17:41:36 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/%E5%89%8D%E7%BC%80%E5%92%8C%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</guid>
+      <guid>https://smallzhong.github.io/post/%E5%89%8D%E7%BC%80%E5%92%8C%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</guid>
       <description>前缀和的时间复杂度并不是 0(n) 而是 O(数值范围) ,要牢记，如果数值范围在 1e5 之内的话就算比较小，可以考虑前缀和做法，但如果数值范围达到 1e8 就不可以再用前缀和来做了</description>
     </item>
     
     <item>
       <title>Acwing1215小朋友排队树状数组解法</title>
-      <link>https://lilacrainode.github.io/post/acwing1215%E5%B0%8F%E6%9C%8B%E5%8F%8B%E6%8E%92%E9%98%9F%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%81%9A%E6%B3%95/</link>
+      <link>https://smallzhong.github.io/post/acwing1215%E5%B0%8F%E6%9C%8B%E5%8F%8B%E6%8E%92%E9%98%9F%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%81%9A%E6%B3%95/</link>
       <pubDate>Thu, 23 Jan 2020 22:07:02 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/acwing1215%E5%B0%8F%E6%9C%8B%E5%8F%8B%E6%8E%92%E9%98%9F%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%81%9A%E6%B3%95/</guid>
+      <guid>https://smallzhong.github.io/post/acwing1215%E5%B0%8F%E6%9C%8B%E5%8F%8B%E6%8E%92%E9%98%9F%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%81%9A%E6%B3%95/</guid>
       <description>逆序对是指两个数前面一个比后面一个大，比如 3 2 1 这样一个数列，里面的逆序对就是 3和2，3和1，2和1 共3对，那么就说明 这个数列要通过冒泡排序变为从小到大的顺序的话需要做3次交换 可以这样想：每交换相邻两个元素最多只会使逆序对的数量减一 ，因为其不会影响到其他的元素和这两个元素的逆序对</description>
     </item>
     
     <item>
       <title>Acwing1270数列区间最大值线段树解法</title>
-      <link>https://lilacrainode.github.io/post/Acwing1270%E6%95%B0%E5%88%97%E5%8C%BA%E9%97%B4%E6%9C%80%E5%A4%A7%E5%80%BC-%E7%BA%BF%E6%AE%B5%E6%A0%91%E8%A7%A3%E6%B3%95/</link>
+      <link>https://smallzhong.github.io/post/Acwing1270%E6%95%B0%E5%88%97%E5%8C%BA%E9%97%B4%E6%9C%80%E5%A4%A7%E5%80%BC-%E7%BA%BF%E6%AE%B5%E6%A0%91%E8%A7%A3%E6%B3%95/</link>
       <pubDate>Thu, 23 Jan 2020 14:40:29 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/Acwing1270%E6%95%B0%E5%88%97%E5%8C%BA%E9%97%B4%E6%9C%80%E5%A4%A7%E5%80%BC-%E7%BA%BF%E6%AE%B5%E6%A0%91%E8%A7%A3%E6%B3%95/</guid>
+      <guid>https://smallzhong.github.io/post/Acwing1270%E6%95%B0%E5%88%97%E5%8C%BA%E9%97%B4%E6%9C%80%E5%A4%A7%E5%80%BC-%E7%BA%BF%E6%AE%B5%E6%A0%91%E8%A7%A3%E6%B3%95/</guid>
       <description>原题链接 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 #include &amp;lt;iostream&amp;gt;#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;string.h&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;limits.h&amp;gt; using namespace std; const int N = 100010; int n, m, w[N]; struct Node { int l, r; int maxv; } tr[N * 4]; void pushup(int u) { tr[u].maxv = max(tr[u &amp;lt;&amp;lt; 1].maxv, tr[u &amp;lt;&amp;lt; 1 | 1].maxv); } void build(int u, int l, int r) { if (l == r) { tr[u].l = l; tr[u].r = r; tr[u].maxv = w[r]; return;</description>
     </item>
     
     <item>
       <title>树状数组和线段树模板题</title>
-      <link>https://lilacrainode.github.io/post/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%92%8C%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A8%A1%E6%9D%BF%E9%A2%98/</link>
+      <link>https://smallzhong.github.io/post/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%92%8C%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A8%A1%E6%9D%BF%E9%A2%98/</link>
       <pubDate>Thu, 23 Jan 2020 12:00:19 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%92%8C%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A8%A1%E6%9D%BF%E9%A2%98/</guid>
+      <guid>https://smallzhong.github.io/post/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%92%8C%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A8%A1%E6%9D%BF%E9%A2%98/</guid>
       <description>树状数组会比线段树写起来简单，树状数组能解决的问题线段树一定能解决 线段树要比树状数组慢1倍左右，树状数组1秒能解决的问题线段树可能需要2秒 模板题-动态求连续区间和 树状数组 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 #include &amp;lt;cstdio&amp;gt;#include &amp;lt;cstring&amp;gt;#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;</description>
     </item>
     
     <item>
       <title>正则表达式</title>
-      <link>https://lilacrainode.github.io/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <link>https://smallzhong.github.io/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
       <pubDate>Tue, 21 Jan 2020 21:00:27 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <guid>https://smallzhong.github.io/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
       <description>.* 默认为贪婪匹配，会匹配的结果尽量使一个字符串最长 .*? 为懒惰匹配，使匹配的结果最多 (P29) ()里面的和后面的\1匹配的东西是一样的，如果()里面是点 (.) 而这个点匹配到的字符是A，那么后面的\1就相当于是字符A 模式修正符中的 m 是多行匹配，而如果是WINDOWS系统下的话看到的换行其实是\r\</description>
     </item>
     
     <item>
       <title>Mysql笔记</title>
-      <link>https://lilacrainode.github.io/post/mysql%E7%AC%94%E8%AE%B0/</link>
+      <link>https://smallzhong.github.io/post/mysql%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Tue, 21 Jan 2020 20:58:04 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/mysql%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://smallzhong.github.io/post/mysql%E7%AC%94%E8%AE%B0/</guid>
       <description>asc &amp;mdash;&amp;ndash; ascending order升序 desc &amp;mdash;&amp;ndash; descending order降序 set global interactive_timeout = 1000000; 原来是120 ,为了防止长时间不使用之后断开连接，设置成了100000。 +&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;+&amp;mdash;&amp;mdash;&amp;mdash;-+| Variable_name | Value |+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;+&amp;mdash;&amp;mdash;&amp;mdash;-+| connect_timeout | 10 || delayed_insert_timeout | 300 || have_statement_timeout | YES || innodb_flush_log_at_timeout | 1 || innodb_lock_wait_timeout | 120 || innodb_rollback_on_timeout | OFF || interactive_timeout | 120 || lock_wait_timeout | 31536000 || net_read_timeout | 30 || net_write_timeout | 60 || rpl_stop_slave_timeout | 31536000 || slave_net_timeout | 60 || wait_timeout | 28800 |+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;+&amp;mdash;&amp;mdash;&amp;mdash;-+ = 和 &amp;lt;=&amp;gt; 的区别是后面的那个可以比较两个NULL值</description>
     </item>
     
     <item>
       <title>Php学习笔记</title>
-      <link>https://lilacrainode.github.io/post/php%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://smallzhong.github.io/post/php%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Tue, 21 Jan 2020 20:58:04 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/php%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://smallzhong.github.io/post/php%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description>php没有创建变量的命令，变量会在首次为其赋值时被创建 函数以外的变量只能在 函数之外 访问，不能在函数之内访问，具有GLOBAL作用域 常量是自动全局的，可以贯穿整个脚本使用， 在函数内部也可以用 ，定义常量的时候要用define 字符串运算符中有一个点运算符,可以拼接两个字符串 PHP的函数</description>
     </item>
     
     <item>
       <title>哈曼夫树</title>
-      <link>https://lilacrainode.github.io/post/%E5%93%88%E6%9B%BC%E5%A4%AB%E6%A0%91/</link>
+      <link>https://smallzhong.github.io/post/%E5%93%88%E6%9B%BC%E5%A4%AB%E6%A0%91/</link>
       <pubDate>Tue, 21 Jan 2020 20:57:16 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/%E5%93%88%E6%9B%BC%E5%A4%AB%E6%A0%91/</guid>
+      <guid>https://smallzhong.github.io/post/%E5%93%88%E6%9B%BC%E5%A4%AB%E6%A0%91/</guid>
       <description>初始状态下有n个结点，将他们视座n棵只有一个结点的树 合并其中根节点最小的两棵树，这样树的总数就少了一颗 重复操作2，直到只剩下一棵树为止，这棵树就是哈曼夫树</description>
     </item>
     
     <item>
       <title>Html &amp; css笔记</title>
-      <link>https://lilacrainode.github.io/post/html-css%E7%AC%94%E8%AE%B0/</link>
+      <link>https://smallzhong.github.io/post/html-css%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Tue, 21 Jan 2020 20:56:13 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/html-css%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://smallzhong.github.io/post/html-css%E7%AC%94%E8%AE%B0/</guid>
       <description>html 空格要用 &amp;amp;nbsp 来表示，也可以用全角符号中的空格来表示 内联元素又名行内元素，内联元素的显示可以形象地成为 文本模式 ，即 一个挨一个 ，在同一行按从左往右的顺序显示 lable标签可以用来提升用户体验，可以在点击lable的字之后运行控件 1.2、具有boolean值得属性 例如：disabled</description>
     </item>
     
     <item>
       <title>最长回文字符串</title>
-      <link>https://lilacrainode.github.io/post/%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <link>https://smallzhong.github.io/post/%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
       <pubDate>Tue, 21 Jan 2020 20:56:13 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <guid>https://smallzhong.github.io/post/%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
       <description>1 2 3 4 ULL get(ULL h[], int l, int r) { return h[r] - h[l - 1] * p[r - l + 1]; } 这个get函数有点难懂,举个例子这个字符串长度为5,是&amp;quot;abcde&amp;rdquo; 传入的参数:l = 3, r = 5,即需要返回cde字符串的哈希值.如果直接用131进制来想的话可能会有点蒙,不妨用10进制来整理思路.可以知道如果用</description>
     </item>
     
     <item>
       <title>二叉堆</title>
-      <link>https://lilacrainode.github.io/post/%E4%BA%8C%E5%8F%89%E5%A0%86/</link>
+      <link>https://smallzhong.github.io/post/%E4%BA%8C%E5%8F%89%E5%A0%86/</link>
       <pubDate>Tue, 21 Jan 2020 20:56:10 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/%E4%BA%8C%E5%8F%89%E5%A0%86/</guid>
+      <guid>https://smallzhong.github.io/post/%E4%BA%8C%E5%8F%89%E5%A0%86/</guid>
       <description>使用数组来存储二叉堆，第一个结点将存储于数组中的1号位，并且数组i号位表示的结点的左孩子就是2i号位，而右孩子则是(2i+1)号位,（（（日后复习的时候可以画画看，如果是完全二叉树的画一个位置都不会浪费</description>
     </item>
     
     <item>
       <title>并查集</title>
-      <link>https://lilacrainode.github.io/post/%E5%B9%B6%E6%9F%A5%E9%9B%86/</link>
+      <link>https://smallzhong.github.io/post/%E5%B9%B6%E6%9F%A5%E9%9B%86/</link>
       <pubDate>Tue, 21 Jan 2020 20:54:58 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/%E5%B9%B6%E6%9F%A5%E9%9B%86/</guid>
+      <guid>https://smallzhong.github.io/post/%E5%B9%B6%E6%9F%A5%E9%9B%86/</guid>
       <description>count&amp;ndash;的话，是一进去就减了 算法笔记P343 好朋友代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std; const int N = 110; int</description>
     </item>
     
     <item>
       <title>AVL</title>
-      <link>https://lilacrainode.github.io/post/AVL/</link>
+      <link>https://smallzhong.github.io/post/AVL/</link>
       <pubDate>Tue, 21 Jan 2020 20:54:17 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/AVL/</guid>
+      <guid>https://smallzhong.github.io/post/AVL/</guid>
       <description>某个结点的平衡因子的定义是左子树的高度减去右子树的高度，在平衡二叉树中平衡因子只可能为 -1，0，1.不可能为其他数值 LL型直接以根节点A为ROOT进行右旋，LR型先忽略根节点，将根节点的左子树进行左旋，旋转成为LL型AVL，再旋转LL型AVL 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19</description>
     </item>
     
     <item>
       <title>滑动窗口</title>
-      <link>https://lilacrainode.github.io/post/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
+      <link>https://smallzhong.github.io/post/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</link>
       <pubDate>Tue, 21 Jan 2020 20:51:50 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</guid>
+      <guid>https://smallzhong.github.io/post/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/</guid>
       <description>题目链接（acwing） 滑动窗口是用来考察队列用法的一道经典题 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 #include &amp;lt;stdio.h&amp;gt;#include &amp;lt;iostream&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;string.h&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std; const int N = 1000010; int q[N]; //队列中存储的是对</description>
     </item>
     
     <item>
       <title>贪心算法刷题</title>
-      <link>https://lilacrainode.github.io/post/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/</link>
+      <link>https://smallzhong.github.io/post/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/</link>
       <pubDate>Tue, 21 Jan 2020 20:43:09 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/</guid>
+      <guid>https://smallzhong.github.io/post/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/</guid>
       <description>题目 首先用笔计算可得，当公里数为13时分两次乘车的花费和只一次乘车的花费相等，都是30元，因此13公里为一个分界线 计算可得，如果只乘8公里的车的话，总价格为10+4*2=18，平均一公里2.25元，而8公里之后每公里需要2.4元，由此可知，假设需要行驶的路程无限大，一定是每8公里</description>
     </item>
     
     <item>
       <title>区间贪心学习笔记</title>
-      <link>https://lilacrainode.github.io/post/%E5%8C%BA%E9%97%B4%E8%B4%AA%E5%BF%83%E7%AC%94%E8%AE%B0/</link>
+      <link>https://smallzhong.github.io/post/%E5%8C%BA%E9%97%B4%E8%B4%AA%E5%BF%83%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Tue, 21 Jan 2020 19:49:36 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/%E5%8C%BA%E9%97%B4%E8%B4%AA%E5%BF%83%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://smallzhong.github.io/post/%E5%8C%BA%E9%97%B4%E8%B4%AA%E5%BF%83%E7%AC%94%E8%AE%B0/</guid>
       <description>本文参考《算法笔记》4.4.2相关内容 对于区间贪心，首先明确一个最基本的原则： 对于这样的两个区间，一定要选I1不能选I2,因为这样会有更大的空间去容纳其他开区间 开始算法的梳理 首先按左端点从大到小排序，如果左端点相同就按右端点从小到大排序 1 2 3 4 5 6 7 8 9 10 11 12 bool cmp(Interval a, Interval b) { if (a.x != b.x)</description>
     </item>
     
     <item>
       <title>19.9.8算法学习笔记</title>
-      <link>https://lilacrainode.github.io/post/19%E5%B9%B49%E6%9C%888%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://smallzhong.github.io/post/19%E5%B9%B49%E6%9C%888%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Tue, 21 Jan 2020 18:37:00 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/19%E5%B9%B49%E6%9C%888%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://smallzhong.github.io/post/19%E5%B9%B49%E6%9C%888%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description>19.9.8算法学习:冒泡排序 冒泡排序需要进行n-1遍才能使其全部按顺序排好 打开为知笔记快捷键为ctrl+art+m 问题 1 2 for int i = 1;i&amp;lt;=4;i++ /*C++*/ 这样的代码如何在Python中实现？ python实现冒泡排序 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 list1 = [3,1,4,5,2] i = 1 j = 0 temp = 0 while i &amp;lt;= 4: i += 1 while j&amp;lt;=3: if list1[j]&amp;lt;list1[j+1]: pass</description>
     </item>
     

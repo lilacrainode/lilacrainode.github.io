@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>树状数组 on 小钟的博客</title>
-    <link>https://lilacrainode.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</link>
+    <link>https://smallzhong.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</link>
     <description>Recent content in 树状数组 on 小钟的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 23 Jan 2020 22:07:02 +0800</lastBuildDate>
     
-	<atom:link href="https://lilacrainode.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://smallzhong.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Acwing1215小朋友排队树状数组解法</title>
-      <link>https://lilacrainode.github.io/post/acwing1215%E5%B0%8F%E6%9C%8B%E5%8F%8B%E6%8E%92%E9%98%9F%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%81%9A%E6%B3%95/</link>
+      <link>https://smallzhong.github.io/post/acwing1215%E5%B0%8F%E6%9C%8B%E5%8F%8B%E6%8E%92%E9%98%9F%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%81%9A%E6%B3%95/</link>
       <pubDate>Thu, 23 Jan 2020 22:07:02 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/acwing1215%E5%B0%8F%E6%9C%8B%E5%8F%8B%E6%8E%92%E9%98%9F%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%81%9A%E6%B3%95/</guid>
+      <guid>https://smallzhong.github.io/post/acwing1215%E5%B0%8F%E6%9C%8B%E5%8F%8B%E6%8E%92%E9%98%9F%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%81%9A%E6%B3%95/</guid>
       <description>逆序对是指两个数前面一个比后面一个大，比如 3 2 1 这样一个数列，里面的逆序对就是 3和2，3和1，2和1 共3对，那么就说明 这个数列要通过冒泡排序变为从小到大的顺序的话需要做3次交换 可以这样想：每交换相邻两个元素最多只会使逆序对的数量减一 ，因为其不会影响到其他的元素和这两个元素的逆序对</description>
     </item>
     
     <item>
       <title>树状数组和线段树模板题</title>
-      <link>https://lilacrainode.github.io/post/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%92%8C%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A8%A1%E6%9D%BF%E9%A2%98/</link>
+      <link>https://smallzhong.github.io/post/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%92%8C%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A8%A1%E6%9D%BF%E9%A2%98/</link>
       <pubDate>Thu, 23 Jan 2020 12:00:19 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%92%8C%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A8%A1%E6%9D%BF%E9%A2%98/</guid>
+      <guid>https://smallzhong.github.io/post/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%92%8C%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A8%A1%E6%9D%BF%E9%A2%98/</guid>
       <description>树状数组会比线段树写起来简单，树状数组能解决的问题线段树一定能解决 线段树要比树状数组慢1倍左右，树状数组1秒能解决的问题线段树可能需要2秒 模板题-动态求连续区间和 树状数组 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 #include &amp;lt;cstdio&amp;gt;#include &amp;lt;cstring&amp;gt;#include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;</description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on 小钟的博客</title>
-    <link>https://lilacrainode.github.io/tags/linux/</link>
+    <link>https://smallzhong.github.io/tags/linux/</link>
     <description>Recent content in linux on 小钟的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 29 Jan 2020 11:50:15 +0800</lastBuildDate>
     
-	<atom:link href="https://lilacrainode.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://smallzhong.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Linux笔记</title>
-      <link>https://lilacrainode.github.io/post/linux%E7%AC%94%E8%AE%B0/</link>
+      <link>https://smallzhong.github.io/post/linux%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Wed, 29 Jan 2020 11:50:15 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/linux%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://smallzhong.github.io/post/linux%E7%AC%94%E8%AE%B0/</guid>
       <description>touch touch 如果文件不存在，创建一个文件，如果文件已经存在，将 文件的修改日期改到最新 在linux下，同一个目录中的文件和目录 不允许重名 mkdir mkdir命令的-p选项可以递归创建目录，即可以创建多重目录 rm rm命令删除文件之后文件不会出现在回收站中 rm命令的 -r 选项可以删除文件夹， -f 选项表示强制删</description>
     </item>
     

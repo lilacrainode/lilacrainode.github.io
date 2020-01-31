@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mysql on 小钟的博客</title>
-    <link>https://lilacrainode.github.io/tags/mysql/</link>
+    <link>https://smallzhong.github.io/tags/mysql/</link>
     <description>Recent content in mysql on 小钟的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 21 Jan 2020 20:58:04 +0800</lastBuildDate>
     
-	<atom:link href="https://lilacrainode.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://smallzhong.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Mysql笔记</title>
-      <link>https://lilacrainode.github.io/post/mysql%E7%AC%94%E8%AE%B0/</link>
+      <link>https://smallzhong.github.io/post/mysql%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Tue, 21 Jan 2020 20:58:04 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/mysql%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://smallzhong.github.io/post/mysql%E7%AC%94%E8%AE%B0/</guid>
       <description>asc &amp;mdash;&amp;ndash; ascending order升序 desc &amp;mdash;&amp;ndash; descending order降序 set global interactive_timeout = 1000000; 原来是120 ,为了防止长时间不使用之后断开连接，设置成了100000。 +&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;+&amp;mdash;&amp;mdash;&amp;mdash;-+| Variable_name | Value |+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;+&amp;mdash;&amp;mdash;&amp;mdash;-+| connect_timeout | 10 || delayed_insert_timeout | 300 || have_statement_timeout | YES || innodb_flush_log_at_timeout | 1 || innodb_lock_wait_timeout | 120 || innodb_rollback_on_timeout | OFF || interactive_timeout | 120 || lock_wait_timeout | 31536000 || net_read_timeout | 30 || net_write_timeout | 60 || rpl_stop_slave_timeout | 31536000 || slave_net_timeout | 60 || wait_timeout | 28800 |+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;+&amp;mdash;&amp;mdash;&amp;mdash;-+ = 和 &amp;lt;=&amp;gt; 的区别是后面的那个可以比较两个NULL值</description>
     </item>
     

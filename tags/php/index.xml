@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>php on 小钟的博客</title>
-    <link>https://lilacrainode.github.io/tags/php/</link>
+    <link>https://smallzhong.github.io/tags/php/</link>
     <description>Recent content in php on 小钟的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 21 Jan 2020 20:58:04 +0800</lastBuildDate>
     
-	<atom:link href="https://lilacrainode.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://smallzhong.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Php学习笔记</title>
-      <link>https://lilacrainode.github.io/post/php%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://smallzhong.github.io/post/php%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Tue, 21 Jan 2020 20:58:04 +0800</pubDate>
       
-      <guid>https://lilacrainode.github.io/post/php%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://smallzhong.github.io/post/php%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description>php没有创建变量的命令，变量会在首次为其赋值时被创建 函数以外的变量只能在 函数之外 访问，不能在函数之内访问，具有GLOBAL作用域 常量是自动全局的，可以贯穿整个脚本使用， 在函数内部也可以用 ，定义常量的时候要用define 字符串运算符中有一个点运算符,可以拼接两个字符串 PHP的函数</description>
     </item>
     
