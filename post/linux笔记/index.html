@@ -150,6 +150,9 @@
     <li><a href="#cp">cp</a></li>
     <li><a href="#mv">mv</a></li>
     <li><a href="#cat--more">cat && more</a></li>
+  </ul>
+
+  <ul>
     <li><a href="#grep">grep</a></li>
     <li><a href="#重定向">重定向</a></li>
     <li><a href="#ls">ls</a></li>
@@ -189,6 +192,13 @@
         <li><a href="#进程信息-所谓进程就是当前正在执行的一个程序">进程信息 （所谓进程，就是当前正在执行的一个程序）</a></li>
         <li><a href="#ps-选项功能说明">ps 选项功能说明</a></li>
         <li><a href="#其他与进程有关的命令">其他与进程有关的命令</a></li>
+      </ul>
+    </li>
+    <li><a href="#其他linux命令">其他linux命令</a>
+      <ul>
+        <li><a href="#查找文件">查找文件</a></li>
+        <li><a href="#软连接">软连接</a></li>
+        <li><a href="#硬链接">硬链接</a></li>
       </ul>
     </li>
   </ul>
@@ -797,7 +807,7 @@ du -h <span style="color:#000;font-weight:bold">[</span>目录名<span style="co
 </code></pre></td></tr></table>
 </div>
 </div><ul>
-<li><em>df -h</em> 之后查看的重点应该是挂载点为 <strong>/（根目录）</strong> 的那一条，因为可以看出当前磁盘的使用空间</li>
+<li><em>df -h</em> 之后查看的重点应该是挂载点为 <strong>/（根目录）</strong> 的那一条，因为可以看出当前磁盘的使用空间（disk usage）</li>
 </ul>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -898,6 +908,66 @@ top   <span style="color:#998;font-style:italic"># 动态显示运行中的进�
 <ul>
 <li>kill 用来终止指定代号的进程，如果单纯的kill杀不死进程可以尝试使用 kill -9 来强制终止进程</li>
 </ul>
+<blockquote>
+<p>在使用 <em>kill</em> 命令时，最好只终止由当前用户开启的进程，而不要终止 <em>root</em> 身份开启的进程，否则可能导致系统崩溃</p>
+<ul>
+<li>要退出 <em>top</em> 可以直接输入 <em>q</em></li>
+</ul>
+</blockquote>
+<h2 id="其他linux命令">其他linux命令</h2>
+<h3 id="查找文件">查找文件</h3>
+<ul>
+<li>find命令功能十分强大，通常用来在 <strong>特定的目录下搜索</strong> 符合条件的文件</li>
+</ul>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">find <span style="color:#000;font-weight:bold">[</span>路径<span style="color:#000;font-weight:bold">]</span> -name <span style="color:#d14">&#34;*.py&#34;</span>  <span style="color:#998;font-style:italic"># 查找指定路径下扩展名为.py的文件，包括子目录</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>如果省略路径，表示在当前文件夹下查找</li>
+</ul>
+<h3 id="软连接">软连接</h3>
+<ul>
+<li>用法：</li>
+</ul>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ln -s 被链接的源文件 链接文件   <span style="color:#998;font-style:italic"># 建立文件的软链接，相当于window下的快捷方式</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>注意：没有 <em>-s</em> 选项建立的是一个硬链接文件</li>
+</ul>
+<blockquote>
+<p>两个文件占用相同大小的硬盘空间， <strong>工作中几乎不会建立文件的硬链接</strong></p>
+</blockquote>
+<ul>
+<li>源文件 <strong>一定</strong> 要用 <strong>绝对路径</strong> ，不能使用相对路径，这样可以方便移动链接文件后，仍能正常使用</li>
+</ul>
+<h3 id="硬链接">硬链接</h3>
+<ul>
+<li>在实际工作中几乎不会创建文件的硬链接</li>
+</ul>
+<h4 id="文件硬链接示意图">文件硬链接示意图</h4>
+<p><img src="https://note.youdao.com/yws/api/personal/file/49E8C09510A44B8A9421354FCD18F4AB?method=download&amp;shareKey=292a209ef983c0529816815e810947c0" alt="avatar"></p>
+<blockquote>
+<p>在linux中， <strong>文件名</strong> 和 <strong>文件的数据是分开存储的</strong>
+提示：</p>
+<blockquote>
+<ul>
+<li>在linux中，只有文件的 <strong>硬连接数 == 0</strong> 才会被删除</li>
+<li>使用 <em>ls -l</em>  可以查看一个文件的硬链接的数量</li>
+<li>在日常工作中，几乎不会建立文件的硬链接，知道即可</li>
+</ul>
+</blockquote>
+</blockquote>
 
         </div>
 
