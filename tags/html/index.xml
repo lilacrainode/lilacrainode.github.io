@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html on 小钟的博客</title>
+    <link>https://smallzhong.github.io/tags/html/</link>
+    <description>Recent content in html on 小钟的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 03 Feb 2020 21:09:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://smallzhong.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>新html &amp; css</title>
+      <link>https://smallzhong.github.io/post/%E6%96%B0html/</link>
+      <pubDate>Mon, 03 Feb 2020 21:09:28 +0800</pubDate>
+      
+      <guid>https://smallzhong.github.io/post/%E6%96%B0html/</guid>
+      <description>webstorm中输入标签然后按 tab 可以自动补全标签 ul&amp;gt;li*5(tab) 可以快速插入含有5个li的ul，写了一个li的内容按 enter 可以快速切换到下一个li标签里面 ol 列表参数 | 属性 | 值 | 描述 | | &amp;mdash; | &amp;mdash; | &amp;mdash; | &amp;mdash; | | reversed | reversed | 规定列表顺序为降序(9,8,7&amp;hellip;) | | start | number | 规定有序列表的起始值 | | type</description>
+    </item>
+    
+  </channel>
+</rss>
