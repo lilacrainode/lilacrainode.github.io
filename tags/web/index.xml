@@ -6,10 +6,19 @@
     <description>Recent content in web on 小钟的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 29 Jan 2020 11:50:15 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 03 Feb 2020 20:06:38 +0800</lastBuildDate>
     
 	<atom:link href="https://smallzhong.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pycharm快捷键和设置</title>
+      <link>https://smallzhong.github.io/post/pycharm%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%92%8C%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Mon, 03 Feb 2020 20:06:38 +0800</pubDate>
+      
+      <guid>https://smallzhong.github.io/post/pycharm%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%92%8C%E8%AE%BE%E7%BD%AE/</guid>
+      <description>f12 可以聚焦到上一个使用的窗口 pycharm中 ctrl + shift + f12 可以隐藏所有工具窗口 alt + shift + e 可以将当前行在console中运行 shift + enter 可以 split line ,光标不移到下一行但光标之后的东西移到下一行 f4 转到定义 ctrl + q 快速查看文档 ctrl + alt + t 可以调出surround with窗口 ctrl + j 插入模板 ctrl + tab 在各窗口之</description>
+    </item>
     
     <item>
       <title>Linux笔记</title>
