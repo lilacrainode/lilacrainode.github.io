@@ -6,10 +6,19 @@
     <description>Recent content on 小钟的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 03 Feb 2020 21:09:28 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Feb 2020 12:50:34 +0800</lastBuildDate>
     
 	<atom:link href="https://smallzhong.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>新css</title>
+      <link>https://smallzhong.github.io/post/%E6%96%B0css/</link>
+      <pubDate>Mon, 10 Feb 2020 12:50:34 +0800</pubDate>
+      
+      <guid>https://smallzhong.github.io/post/%E6%96%B0css/</guid>
+      <description>css样式 内部样式表 外部样式表 内联样式表（行内样式、嵌入式样式） 内部样式表 1 2 3 &amp;lt;style type=&amp;#39;text/css&amp;#39;&amp;gt; /*css语句*/ &amp;lt;/style&amp;gt; 写内部样式表的时候最好写到 &amp;lt;head&amp;gt; 标签中去 导入外部样式表: 1 &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34; href=&amp;#34;目标文件的路径及文件名全名&amp;#34; 引入外部样式表还有一个 @import 的引入方法，不过现在这种方法已经被淘</description>
+    </item>
     
     <item>
       <title>新html &amp; css</title>
