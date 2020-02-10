@@ -196,12 +196,39 @@
             <ul>
 <li>webstorm中输入标签然后按 <code>tab</code> 可以自动补全标签</li>
 <li><code>ul&gt;li*5(tab)</code> 可以快速插入含有5个li的ul，写了一个li的内容按 <code>enter</code> 可以快速切换到下一个li标签里面</li>
-<li><code>ol</code> 列表参数
-| 属性 | 值 | 描述 |
-| &mdash; | &mdash; | &mdash; | &mdash; |
-| reversed | reversed | 规定列表顺序为降序(9,8,7&hellip;) |
-| start | number | 规定有序列表的起始值 |
-| type | 1 A a I i | 规定在列表中使用的标记类型（1,2..）(A,B..)(a,b..) |</li>
+<li><code>ol</code> 列表参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reversed</td>
+<td>reversed</td>
+<td>规定列表顺序为降序(9,8,7&hellip;)</td>
+<td></td>
+</tr>
+<tr>
+<td>start</td>
+<td>number</td>
+<td>规定有序列表的起始值</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td>1 A a I i</td>
+<td>规定在列表中使用的标记类型（1,2..）(A,B..)(a,b..)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
 <li><code>&lt;dl&gt;</code> 标签定义了定义列表（definition list），用于结合 <code>&lt;dt&gt;</code> （定义列表中的项目）和 <code>&lt;dd&gt;</code> （描述列表中的项目）。实例：</li>
 </ul>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -224,20 +251,72 @@
 </div>
 </div><ul>
 <li><code>&lt;table&gt;</code> 表示表格， <code>&lt;tr&gt;</code> 表示行，<code>&lt;td&gt;</code> 表示列， <code>&lt;th&gt;</code> 也是列，但是是表头</li>
-<li><code>&lt;table&gt;</code> 标签属性
-| 属性 | 值 | 描述 |
-| &mdash; | &mdash; | &mdash; | &mdash; |
-| border | pixels | 规定表格边框的宽度 |
-| cellspacing | pixels<!-- raw HTML omitted -->% | 规定单元格之间的空白（分割线中间的空白） |
-| cellpadding | pixels<!-- raw HTML omitted -->% | 规定单元边沿与其内容之间的空白（字和上下两条线之间的距离） |
-<img src="https://note.youdao.com/yws/api/personal/file/33262897CF184522A83809BC18EAD46D?method=download&amp;shareKey=ef8f60944ed3edfb69c5b72405d183e3" alt="webstorm截图"><img src="https://note.youdao.com/yws/api/personal/file/495844F76F3E4492B6A578E0BD87D06D?method=download&amp;shareKey=83155e748ef7c8e4570ca27acea13508" alt="参数说明"></li>
-<li><code>&lt;td&gt;</code> 标签中 <code>align</code> 属性规定单元格的 <strong>水平对齐方式</strong></li>
-<li><code>&lt;td&gt;</code> 标签属性
-| 属性 | 值 | 描述 |
-| &mdash; | &mdash; | &mdash; | &mdash; |
-| align | <strong>left</strong> <!-- raw HTML omitted --> <strong>right</strong> <!-- raw HTML omitted --> <strong>center</strong> <!-- raw HTML omitted --> <strong>justify</strong> <!-- raw HTML omitted -->  <strong>char</strong> <!-- raw HTML omitted --> | 规定单元格的水平对齐方式 |
-| colspan | number | 设置单元格 <strong>可横跨的列数</strong> |</li>
+<li><code>&lt;table&gt;</code> 标签属性</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border</td>
+<td>pixels</td>
+<td>规定表格边框的宽度</td>
+<td></td>
+</tr>
+<tr>
+<td>cellspacing</td>
+<td>pixels<!-- raw HTML omitted -->%</td>
+<td>规定单元格之间的空白（分割线中间的空白）</td>
+<td></td>
+</tr>
+<tr>
+<td>cellpadding</td>
+<td>pixels<!-- raw HTML omitted -->%</td>
+<td>规定单元边沿与其内容之间的空白（字和上下两条线之间的距离）</td>
+<td></td>
+</tr>
+<tr>
+<td><img src="https://note.youdao.com/yws/api/personal/file/33262897CF184522A83809BC18EAD46D?method=download&amp;shareKey=ef8f60944ed3edfb69c5b72405d183e3" alt="webstorm截图"><img src="https://note.youdao.com/yws/api/personal/file/495844F76F3E4492B6A578E0BD87D06D?method=download&amp;shareKey=83155e748ef7c8e4570ca27acea13508" alt="参数说明"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>&lt;td&gt;</code> 标签中 <code>align</code> 属性规定单元格的 <strong>水平对齐方式</strong></li>
+<li><code>&lt;td&gt;</code> 标签属性</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>align</td>
+<td><strong>left</strong> <!-- raw HTML omitted --> <strong>right</strong> <!-- raw HTML omitted --> <strong>center</strong> <!-- raw HTML omitted --> <strong>justify</strong> <!-- raw HTML omitted -->  <strong>char</strong> <!-- raw HTML omitted --></td>
+<td>规定单元格的水平对齐方式</td>
+<td></td>
+</tr>
+<tr>
+<td>colspan</td>
+<td>number</td>
+<td>设置单元格 <strong>可横跨的列数</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
         </div>
 
