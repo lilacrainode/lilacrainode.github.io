@@ -6,10 +6,19 @@
     <description>Recent content on 小钟的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 10 Feb 2020 12:50:34 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 14 Feb 2020 11:21:46 +0800</lastBuildDate>
     
 	<atom:link href="https://smallzhong.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Css技巧</title>
+      <link>https://smallzhong.github.io/post/css%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Fri, 14 Feb 2020 11:21:46 +0800</pubDate>
+      
+      <guid>https://smallzhong.github.io/post/css%E6%8A%80%E5%B7%A7/</guid>
+      <description>css技巧 将 &amp;lt;a&amp;gt; 标签的css属性中 text-decoration 设置成 none 即可去除 &amp;lt;a&amp;gt; 标签的下划线 这样表示自动居中 如果需要网站页面的主体分为左右两边的话，要把网站主题弄到一个 main 的 div 里面，然后左右两边也分成两个div， leftmain 和 rightmain ，然后把 display 属性设置为 inline-block ，这样可以分成两边 效果： 如果需要鼠标悬停在一个 &amp;lt;a&amp;gt; 标签上面的时候其下面的</description>
+    </item>
     
     <item>
       <title>新css</title>

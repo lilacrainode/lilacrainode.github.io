@@ -77,6 +77,22 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://smallzhong.github.io/post/mysql%E7%AC%94%E8%AE%B0/" title="Mysql笔记">Mysql笔记</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年1月21日
+        </date>
+        
+        <div class="post-content">
+            asc &mdash;&ndash; ascending order升序 desc &mdash;&ndash; descending order降序 set global interactive_timeout = 1000000; 原来是120 ,为了防止长时间不使用之后断开连接，设置成了100000。 +&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;-+| Variable_name | Value |+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;-+| connect_timeout | 10 || delayed_insert_timeout | 300 || have_statement_timeout | YES || innodb_flush_log_at_timeout | 1 || innodb_lock_wait_timeout | 120 || innodb_rollback_on_timeout | OFF || interactive_timeout | 120 || lock_wait_timeout | 31536000 || net_read_timeout | 30 || net_write_timeout | 60 || rpl_stop_slave_timeout | 31536000 || slave_net_timeout | 60 || wait_timeout | 28800 |+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;-+ = 和 &lt;=&gt; 的区别是后面的那个可以比较两个NULL值……
+        </div>
+        <p class="readmore"><a href="https://smallzhong.github.io/post/mysql%E7%AC%94%E8%AE%B0/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://smallzhong.github.io/post/php%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Php学习笔记">Php学习笔记</a>
             </h1>
         </header>
@@ -218,22 +234,6 @@
         <p class="readmore"><a href="https://smallzhong.github.io/post/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/">阅读全文</a></p>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://smallzhong.github.io/post/%E5%8C%BA%E9%97%B4%E8%B4%AA%E5%BF%83%E7%AC%94%E8%AE%B0/" title="区间贪心学习笔记">区间贪心学习笔记</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年1月21日
-        </date>
-        
-        <div class="post-content">
-            本文参考《算法笔记》4.4.2相关内容 对于区间贪心，首先明确一个最基本的原则： 对于这样的两个区间，一定要选I1不能选I2,因为这样会有更大的空间去容纳其他开区间 开始算法的梳理 首先按左端点从大到小排序，如果左端点相同就按右端点从小到大排序 1 2 3 4 5 6 7 8 9 10 11 12 bool cmp(Interval a, Interval b) { if (a.x != b.x)……
-        </div>
-        <p class="readmore"><a href="https://smallzhong.github.io/post/%E5%8C%BA%E9%97%B4%E8%B4%AA%E5%BF%83%E7%AC%94%E8%AE%B0/">阅读全文</a></p>
-    </article>
-    
     
 
 
@@ -287,6 +287,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://smallzhong.github.io/post/css%E6%8A%80%E5%B7%A7/" title="Css技巧">Css技巧</a>
+    </li>
+    
+    <li>
         <a href="https://smallzhong.github.io/post/%E6%96%B0css/" title="新css">新css</a>
     </li>
     
@@ -320,10 +324,6 @@
     
     <li>
         <a href="https://smallzhong.github.io/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">正则表达式</a>
-    </li>
-    
-    <li>
-        <a href="https://smallzhong.github.io/post/mysql%E7%AC%94%E8%AE%B0/" title="Mysql笔记">Mysql笔记</a>
     </li>
     
 </ul>
