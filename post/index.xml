@@ -209,5 +209,14 @@
       <description>19.9.8算法学习:冒泡排序 冒泡排序需要进行n-1遍才能使其全部按顺序排好 打开为知笔记快捷键为ctrl+art+m 问题 1 2 for int i = 1;i&amp;lt;=4;i++ /*C++*/ 这样的代码如何在Python中实现？ python实现冒泡排序 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 list1 = [3,1,4,5,2] i = 1 j = 0 temp = 0 while i &amp;lt;= 4: i += 1 while j&amp;lt;=3: if list1[j]&amp;lt;list1[j+1]: pass</description>
     </item>
     
+    <item>
+      <title>快速幂</title>
+      <link>https://smallzhong.github.io/post/%E5%BF%AB%E9%80%9F%E5%B9%82/</link>
+      <pubDate>Tue, 21 Jan 2020 18:37:00 +0800</pubDate>
+      
+      <guid>https://smallzhong.github.io/post/%E5%BF%AB%E9%80%9F%E5%B9%82/</guid>
+      <description>a的k次方 mod p 的时间复杂度是 O(logk) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 #include &amp;lt;iostream&amp;gt; #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;cstdio&amp;gt; #include &amp;lt;algorithm&amp;gt; #include &amp;lt;string.h&amp;gt; typedef long long LL; LL binaryPow(LL a, LL b) { if (b == 0) { return 1; } if (b &amp;amp;1) { return a * binaryPow(a, b - 1); } else { LL temp = binaryPow(a, b / 2); return temp * temp; //不要直接两个binarypow相乘，那样会增加复杂度 } } int main() { LL result = binaryPow(25, 6); printf(&amp;#34;%lld&amp;#34;, result); return 0; }</description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>快速幂 on 小钟的博客</title>
+    <link>https://smallzhong.github.io/tags/%E5%BF%AB%E9%80%9F%E5%B9%82/</link>
+    <description>Recent content in 快速幂 on 小钟的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 21 Jan 2020 18:37:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://smallzhong.github.io/tags/%E5%BF%AB%E9%80%9F%E5%B9%82/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>快速幂</title>
+      <link>https://smallzhong.github.io/post/%E5%BF%AB%E9%80%9F%E5%B9%82/</link>
+      <pubDate>Tue, 21 Jan 2020 18:37:00 +0800</pubDate>
+      
+      <guid>https://smallzhong.github.io/post/%E5%BF%AB%E9%80%9F%E5%B9%82/</guid>
+      <description>a的k次方 mod p 的时间复杂度是 O(logk) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 #include &amp;lt;iostream&amp;gt; #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;cstdio&amp;gt; #include &amp;lt;algorithm&amp;gt; #include &amp;lt;string.h&amp;gt; typedef long long LL; LL binaryPow(LL a, LL b) { if (b == 0) { return 1; } if (b &amp;amp;1) { return a * binaryPow(a, b - 1); } else { LL temp = binaryPow(a, b / 2); return temp * temp; //不要直接两个binarypow相乘，那样会增加复杂度 } } int main() { LL result = binaryPow(25, 6); printf(&amp;#34;%lld&amp;#34;, result); return 0; }</description>
+    </item>
+    
+  </channel>
+</rss>
