@@ -6,10 +6,19 @@
     <description>Recent content on 小钟的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 14 Feb 2020 11:21:46 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2020 10:14:41 +0800</lastBuildDate>
     
 	<atom:link href="https://smallzhong.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>奇怪的知识</title>
+      <link>https://smallzhong.github.io/post/%E5%A5%87%E6%80%AA%E7%9A%84%E7%9F%A5%E8%AF%86/</link>
+      <pubDate>Sat, 14 Mar 2020 10:14:41 +0800</pubDate>
+      
+      <guid>https://smallzhong.github.io/post/%E5%A5%87%E6%80%AA%E7%9A%84%E7%9F%A5%E8%AF%86/</guid>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 #include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;assert.h&amp;gt;#include &amp;lt;windows.h&amp;gt;#include &amp;lt;iostream&amp;gt;using namespace std; #define A(format, data) \do \{ \printf(format &amp;#34;123123&amp;#34;, data); \} while (0) int main() { // A(&amp;#34;%d&amp;#34;,123123); printf(&amp;#34;%d&amp;#34; &amp;#34;asdadasdasd&amp;#34;,123); }</description>
+    </item>
     
     <item>
       <title>Css技巧</title>
