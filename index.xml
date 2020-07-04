@@ -6,10 +6,19 @@
     <description>Recent content on 小钟的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 14 Mar 2020 10:14:41 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2020 20:33:42 +0800</lastBuildDate>
     
 	<atom:link href="https://smallzhong.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DOS头&#43;标准PE头&#43;可选PE头解析</title>
+      <link>https://smallzhong.github.io/post/DOS%E5%A4%B4&#43;%E6%A0%87%E5%87%86PE%E5%A4%B4&#43;%E5%8F%AF%E9%80%89PE%E5%A4%B4%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Sat, 04 Jul 2020 20:33:42 +0800</pubDate>
+      
+      <guid>https://smallzhong.github.io/post/DOS%E5%A4%B4&#43;%E6%A0%87%E5%87%86PE%E5%A4%B4&#43;%E5%8F%AF%E9%80%89PE%E5%A4%B4%E8%A7%A3%E6%9E%90/</guid>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 #include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;windows.h&amp;gt; #include &amp;lt;iostream&amp;gt; using namespace std; const char *filepath = &amp;#34;cyberpet.exe&amp;#34;; #define ERROR_LOG(x) \do \{ \perror(x); \fprintf(stderr, &amp;#34;fseek() failed in file %s at line # %d\n&amp;#34;, __FILE__, \__LINE__ - 5); \exit(EXIT_FAILURE); \} while (0) int main() { FILE *fp; fp = fopen(filepath, &amp;#34;r&amp;#34;); if (fp == NULL) cout &amp;lt;&amp;lt; &amp;#34;can&amp;#39;t open it!&amp;#34;; IMAGE_DOS_HEADER dos_header; fread(&amp;amp;dos_header, sizeof(IMAGE_DOS_HEADER), 1, fp); // 把DOS头读进来 if (dos_header.e_magic != IMAGE_DOS_SIGNATURE) cout &amp;lt;&amp;lt; &amp;#34;这不是一个P</description>
+    </item>
     
     <item>
       <title>奇怪的知识</title>

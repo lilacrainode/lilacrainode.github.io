@@ -6,21 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>树状数组 | 小钟的博客</title>
-    <meta property="og:title" content="树状数组 - 小钟的博客">
+    <title>pe | 小钟的博客</title>
+    <meta property="og:title" content="pe - 小钟的博客">
     <meta property="og:type" content="article">
         
         
     <meta name="Keywords" content="">
-    <meta name="description" content="树状数组">
+    <meta name="description" content="pe">
         
     <meta name="author" content="小钟">
-    <meta property="og:url" content="https://smallzhong.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/">
+    <meta property="og:url" content="https://smallzhong.github.io/tags/pe/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml+xml" href="https://smallzhong.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/index.xml" title="小钟的博客" />
+    <link rel="alternate" type="application/rss+xml+xml" href="https://smallzhong.github.io/tags/pe/index.xml" title="小钟的博客" />
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -77,7 +77,7 @@
     
     <h3 class="archive-title">
         包含标签
-        <span class="keyword">树状数组</span>
+        <span class="keyword">pe</span>
         的文章
     </h3>
     
@@ -86,32 +86,16 @@
     <article class="post">
         <header>
             <h1 class="post-title">
-                <a href="https://smallzhong.github.io/post/acwing1215%E5%B0%8F%E6%9C%8B%E5%8F%8B%E6%8E%92%E9%98%9F%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%81%9A%E6%B3%95/">Acwing1215小朋友排队树状数组解法</a>
+                <a href="https://smallzhong.github.io/post/DOS%E5%A4%B4&#43;%E6%A0%87%E5%87%86PE%E5%A4%B4&#43;%E5%8F%AF%E9%80%89PE%E5%A4%B4%E8%A7%A3%E6%9E%90/">DOS头&#43;标准PE头&#43;可选PE头解析</a>
             </h1>
         </header>
         <date class="post-meta meta-date">
-            2020年1月23日
+            2020年7月4日
         </date>
         
         <div class="post-content">
-            逆序对是指两个数前面一个比后面一个大，比如 3 2 1 这样一个数列，里面的逆序对就是 3和2，3和1，2和1 共3对，那么就说明 这个数列要通过冒泡排序变为从小到大的顺序的话需要做3次交换 可以这样想：每交换相邻两个元素最多只会使逆序对的数量减一 ，因为其不会影响到其他的元素和这两个元素的逆序对……
-            <p class="readmore"><a href="https://smallzhong.github.io/post/acwing1215%E5%B0%8F%E6%9C%8B%E5%8F%8B%E6%8E%92%E9%98%9F%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%81%9A%E6%B3%95/">阅读全文</a></p>
-        </div>
-    </article>
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://smallzhong.github.io/post/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%92%8C%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A8%A1%E6%9D%BF%E9%A2%98/">树状数组和线段树模板题</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2020年1月23日
-        </date>
-        
-        <div class="post-content">
-            树状数组会比线段树写起来简单，树状数组能解决的问题线段树一定能解决 线段树要比树状数组慢1倍左右，树状数组1秒能解决的问题线段树可能需要2秒 模板题-动态求连续区间和 树状数组 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 #include &lt;cstdio&gt;#include &lt;cstring&gt;#include &lt;iostream&gt;#include &lt;algorithm&gt;……
-            <p class="readmore"><a href="https://smallzhong.github.io/post/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84%E5%92%8C%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%A8%A1%E6%9D%BF%E9%A2%98/">阅读全文</a></p>
+            1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 #include &lt;stdlib.h&gt;#include &lt;windows.h&gt; #include &lt;iostream&gt; using namespace std; const char *filepath = &#34;cyberpet.exe&#34;; #define ERROR_LOG(x) \do \{ \perror(x); \fprintf(stderr, &#34;fseek() failed in file %s at line # %d\n&#34;, __FILE__, \__LINE__ - 5); \exit(EXIT_FAILURE); \} while (0) int main() { FILE *fp; fp = fopen(filepath, &#34;r&#34;); if (fp == NULL) cout &lt;&lt; &#34;can&#39;t open it!&#34;; IMAGE_DOS_HEADER dos_header; fread(&amp;dos_header, sizeof(IMAGE_DOS_HEADER), 1, fp); // 把DOS头读进来 if (dos_header.e_magic != IMAGE_DOS_SIGNATURE) cout &lt;&lt; &#34;这不是一个P……
+            <p class="readmore"><a href="https://smallzhong.github.io/post/DOS%E5%A4%B4&#43;%E6%A0%87%E5%87%86PE%E5%A4%B4&#43;%E5%8F%AF%E9%80%89PE%E5%A4%B4%E8%A7%A3%E6%9E%90/">阅读全文</a></p>
         </div>
     </article>
     
