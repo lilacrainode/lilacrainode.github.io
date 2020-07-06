@@ -6,10 +6,19 @@
     <description>Recent content on 小钟的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 04 Jul 2020 20:33:42 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2020 12:05:27 +0800</lastBuildDate>
     
 	<atom:link href="https://smallzhong.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>手动在exe中添加shellcode</title>
+      <link>https://smallzhong.github.io/post/%E6%89%8B%E5%8A%A8%E5%9C%A8exe%E4%B8%AD%E6%B7%BB%E5%8A%A0shellcode/</link>
+      <pubDate>Mon, 06 Jul 2020 12:05:27 +0800</pubDate>
+      
+      <guid>https://smallzhong.github.io/post/%E6%89%8B%E5%8A%A8%E5%9C%A8exe%E4%B8%AD%E6%B7%BB%E5%8A%A0shellcode/</guid>
+      <description>手动在程序中添加shellcode 思路 首先理清思路，添加shellcode的原理是什么。添加shellcode就是在 节里面没有用到的空白区域 添加入自己的shellcode，然后将程序入口点 OEP 修改到添加的shellcode的起始位置，在执行完shellcode之后再 JMP 跳回原来程序的</description>
+    </item>
     
     <item>
       <title>DOS头&#43;标准PE头&#43;可选PE头解析</title>
