@@ -17,7 +17,7 @@
       <pubDate>Mon, 06 Jul 2020 12:05:27 +0800</pubDate>
       
       <guid>https://smallzhong.github.io/post/%E6%89%8B%E5%8A%A8%E5%9C%A8exe%E4%B8%AD%E6%B7%BB%E5%8A%A0shellcode/</guid>
-      <description>手动在程序中添加shellcode 思路 首先理清思路，添加shellcode的原理是什么。添加shellcode就是在 节里面没有用到的空白区域 添加入自己的shellcode，然后将程序入口点 OEP 修改到添加的shellcode的起始位置，在执行完shellcode之后再 JMP 跳回原来程序的</description>
+      <description>思路 首先理清思路，添加shellcode的原理是什么。添加shellcode就是在 节里面没有用到的空白区域 添加入自己的shellcode，然后将程序入口点 OEP 修改到添加的shellcode的起始位置，在执行完shellcode之后再 JMP 跳回原来程序的入口点。 在这里我们的目标是添加一个</description>
     </item>
     
     <item>

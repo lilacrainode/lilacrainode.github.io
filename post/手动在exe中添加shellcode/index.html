@@ -193,9 +193,14 @@
         </div>
         
         
+        <div class="clear" style="display: none">
+            <div class="toc-article">
+                <div class="toc-title">文章目录</div>
+            </div>
+        </div>
+        
         <div class="post-content">
-            <h1 id="手动在程序中添加shellcode">手动在程序中添加shellcode</h1>
-<h2 id="思路">思路</h2>
+            <h2 id="思路">思路</h2>
 <ul>
 <li>
 <p>首先理清思路，添加shellcode的原理是什么。添加shellcode就是在 <strong>节里面没有用到的空白区域</strong> 添加入自己的shellcode，然后将程序入口点 <strong>OEP</strong> 修改到添加的shellcode的起始位置，在执行完shellcode之后再 <code>JMP</code> 跳回原来程序的入口点。</p>
@@ -332,7 +337,13 @@
 
         <div class="post-meta meta-tags">
             
-            没有标签
+            <ul class="clearfix">
+                
+                <li><a href='https://smallzhong.github.io/tags/reverse'>reverse</a></li>
+                
+                <li><a href='https://smallzhong.github.io/tags/PE%E7%BB%93%E6%9E%84'>PE结构</a></li>
+                
+            </ul>
             
         </div>
     </article>
@@ -388,6 +399,10 @@
     <section class="widget">
         <h3 class="widget-title">标签</h3>
 <div class="tagcloud">
+    
+    <a href="https://smallzhong.github.io/tags/PE%E7%BB%93%E6%9E%84/">PE结构</a>
+    
+    <a href="https://smallzhong.github.io/tags/reverse/">reverse</a>
     
 </div>
     </section>
