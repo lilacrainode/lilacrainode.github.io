@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 小钟的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 06 Jul 2020 12:05:27 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2020 22:57:30 +0800</lastBuildDate>
     
 	<atom:link href="https://smallzhong.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>reverse</title>
+      <link>https://smallzhong.github.io/tags/reverse/</link>
+      <pubDate>Fri, 24 Jul 2020 22:57:30 +0800</pubDate>
+      
+      <guid>https://smallzhong.github.io/tags/reverse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WIN32</title>
+      <link>https://smallzhong.github.io/tags/WIN32/</link>
+      <pubDate>Fri, 24 Jul 2020 22:57:30 +0800</pubDate>
+      
+      <guid>https://smallzhong.github.io/tags/WIN32/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>PE结构</title>
@@ -17,15 +35,6 @@
       <pubDate>Mon, 06 Jul 2020 12:05:27 +0800</pubDate>
       
       <guid>https://smallzhong.github.io/tags/PE%E7%BB%93%E6%9E%84/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>reverse</title>
-      <link>https://smallzhong.github.io/tags/reverse/</link>
-      <pubDate>Mon, 06 Jul 2020 12:05:27 +0800</pubDate>
-      
-      <guid>https://smallzhong.github.io/tags/reverse/</guid>
       <description></description>
     </item>
     
