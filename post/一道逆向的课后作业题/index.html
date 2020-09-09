@@ -235,7 +235,7 @@
 <li>
 <p>由于消息是不断产生的，我们必须将普通的断点换成条件断点。因此我们将断点的条件设置为 <code>[esp+8]==WM_KEYDOWN</code> ，在产生 <strong>键盘按下</strong> 消息的时候断下来。</p>
 <p><img src="http://qdz7ggulh.bkt.clouddn.com/image-20200724223716739.png" alt="image-20200724223716739"></p>
-<p>断下来之后往后翻一下，便可以找到不会弹出 <code>error code</code> 的三个特定的按键，为 <code>g</code> ， <code>F</code>  ，<code>A</code> ，本题结束。</p>
+<p>断下来之后往后翻一下，便可以找到不会弹出 <code>error code</code> 的三个特定的按键，为 <code>0x67</code> ， <code>0x46</code>  ，<code>0x41</code> ，对应大写的 <code>F、A</code> 和小键盘上的 <code>7</code> 。本题结束。（不知道为什么在本机按小键盘上的7的时候并不会弹出103，只有在虚拟机中才能成功。）</p>
 <p><img src="http://qdz7ggulh.bkt.clouddn.com/image-20200724223642313.png" alt="image-20200724223642313"></p>
 </li>
 </ul>
@@ -355,6 +355,10 @@
         
         <li>
             <a target="_blank" href="http://blog.ajil.xyz/" title="ajil的博客">ajil的博客</a>
+        </li>
+        
+        <li>
+            <a target="_blank" href="https://rao2357.github.io/" title="rao2357的博客">rao2357的博客</a>
         </li>
         
     </ul>
